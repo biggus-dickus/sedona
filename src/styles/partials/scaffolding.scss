@@ -1,0 +1,23 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {box-sizing: inherit;}
+
+body {
+  min-width: $body-min-width;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  color: $text-base;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  font-size: $p;
+  line-height: 1.47em;
+}

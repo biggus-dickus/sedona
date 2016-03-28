@@ -23,6 +23,7 @@
   ],
   "dependencies": {
     "normalize-css": "normalize.css#^4.0.0",
-    "jquery": "^2.2.2"
+    "jquery": "^2.2.2",
+    "bower-pt-sans": "pt-sans#*"
   }
 }

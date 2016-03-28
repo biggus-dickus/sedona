@@ -1,0 +1,29 @@
+/* Paths */
+$fonts-path: "../fonts/ptsans";
+
+/* Dimensions */
+$body-min-width: 320px;
+$screen--lg: 1300px;
+$gallery-image-width: 650px;
+
+/* Colors */
+$black: #000000;
+$white: #ffffff;
+$blue: #0c9aec;
+$blue-alpha: rgba(12,154,236,0.88);
+$text-base: #1e2123;
+
+/* Typography */
+$h1: 41px;
+$h2: 33px;
+$h3: 19px;
+$p: 17px;
+
+/* Viewports */
+$mobile: "only screen and (max-width: $body-min-width)";
+$desktop: "only screen and (min-width: 1301px)";
+$retina2x: "(min-resolution: 2dppx)";
+$retina3x: "(min-resolution: 3dppx)";
+
+/* etc */
+$over9000: -9999px;
