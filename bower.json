@@ -1,0 +1,28 @@
+{
+  "name": "planet-express",
+  "description": "Layout for practice",
+  "main": "index.html",
+  "authors": [
+    "Max Maslenko"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Bender",
+    "is",
+    "great!"
+  ],
+  "homepage": "http://biggus-dickus.github.io/futurama",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^4.0.0",
+    "jquery": "^2.2.2"
+  }
+}
