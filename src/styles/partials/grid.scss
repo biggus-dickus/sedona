@@ -1,0 +1,18 @@
+.container {
+  @extend .clearfix;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+
+  @media #{$desktop} {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  &&--fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

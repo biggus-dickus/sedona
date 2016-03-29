@@ -1,24 +1,18 @@
 @charset "UTF-8";
 /*
 @import "partials/buttons.less";
-@import "partials/fonts.less";
 @import "partials/footer.less";
 @import "partials/forms.less";
-@import "partials/grid.less";
 @import "partials/header.less";
-@import "partials/helper-classes.less";
 @import "partials/index.less";
-@import "partials/mixins.less";
 @import "partials/nav.less";
 */
 
-@import "partials/variables.scss";
+@import "partials/variables";
 
-@import "partials/fonts.scss";
-@import "partials/scaffolding.scss";
-@import "partials/normalize.scss";
-
-
-.block {
-  display: block;
-}
+@import "partials/fonts";
+@import "partials/grid";
+@import "partials/mixins";
+@import "partials/scaffolding";
+@import "partials/normalize";
+@import "partials/utils";

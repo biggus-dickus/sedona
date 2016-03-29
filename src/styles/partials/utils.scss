@@ -1,0 +1,52 @@
+.hidden {
+	display: none;
+}
+
+.mob-hidden {
+	@media #{$mobile} {
+		display: none;
+	}
+}
+
+.to-left {
+	float: left;
+}
+
+.to-right {
+	float: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.ib {
+	list-style: none;
+	padding-left: 0;
+	font-size: 0;
+
+	&__item {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__item&__item--vab {
+		vertical-align: bottom;
+	}
+
+	&__item&__item--vabl {
+		vertical-align: baseline;
+	}
+
+	&__item&__item--vat {
+		vertical-align: top;
+	}
+}

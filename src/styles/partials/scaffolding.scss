@@ -10,6 +10,7 @@ body {
   min-width: $body-min-width;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   color: $text-base;
+  text-transform: uppercase;
 }
 
 img {
@@ -19,5 +20,5 @@ img {
 
 p {
   font-size: $p;
-  line-height: 1.47em;
+  line-height: 1.42em;
 }
