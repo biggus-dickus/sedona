@@ -2,13 +2,15 @@
 $fonts-path: "../fonts/ptsans";
 
 /* Dimensions */
-$body-min-width: 320px;
-$screen--lg: 1300px;
+$screen-xs: 320px;
+$screen-lg: 1300px;
 
 /* Colors */
 $black: #000000;
 $white: #ffffff;
-$blue-base: #3AABD8;
+$blue: #81b3d2;
+$blue-hover: #669ec0;
+$blue-focus: #5496bd;
 $text-base: #333333;
 
 /* Typography */

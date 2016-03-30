@@ -4,25 +4,70 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/main.min.css">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <title>Document</title>
+  <title>Welcome to the gorgeous Sedona!</title>
 </head>
 <body>
-  <div class="container">
-    <header class="main-header">
-      <nav class="navbar">
-        <span class="navbar__hamburger"></span>
-        <ul class="navbar__menu">
-          <li class="navbar__menu-item">Главная</li>
-          <li class="navbar__menu-item">Фото и видео</li>
-          <li class="navbar__menu-item">Форма отзыва</li>
-          <li class="navbar__menu-item">HTML Academy</li>
-        </ul>
-      </nav>
-    </header>
 
-    <h1>
-      Седона&nbsp;&mdash; небольшой городок в&nbsp;Аризоне, заслуживающий большего!
-    </h1>
+  <header class="main-header">
+    <nav class="navbar">
+      <a id="navbar-logo" href="/" class="navbar__logo" title="На главную">На главную</a>
+      <div id="menu-toggler" class="navbar__hamburger-wrapper">
+        <span class="navbar__hamburger"></span>
+      </div>
+      <ul id="menu" class="navbar__menu  hidden">
+        <li class="navbar__menu-item">
+          <a class="navbar__menu-link" href="/">Главная</a>
+          <span id="menu-cross" class="navbar__cross">&times;</span>
+        </li>
+        <li class="navbar__menu-item">
+          <a class="navbar__menu-link" href="media.html">Фото и&nbsp;видео</a>
+        </li>
+        <li class="navbar__menu-item">
+          <a class="navbar__menu-link" href="feedback.html">Форма отзыва</a>
+        </li>
+        <li class="navbar__menu-item">
+          <a class="navbar__menu-link" href="//htmlacademy.ru" target="_blank">HTML Academy</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <div class="main-caption">
+      <h1>
+        Седона&nbsp;&mdash; небольшой городок в&nbsp;Аризоне, заслуживающий большего!
+      </h1>
+      <p>
+        Рассмотрим 5&nbsp;причин, по&nbsp;которым Седона круче, чем Гранд-Каньон!
+      </p>
+    </div>
+
+
   </div>
+
+  <footer class="main-footer">
+    <div class="container">
+      <h3>#VisitSedona</h3>
+    </div>
+
+    <ul class="ib socials">
+      <li class="ib__item  socials__item">
+        <a href="#" class="sn sn--tw">Мы в Твиттере</a>
+      </li>
+      <li class="ib__item  socials__item">
+        <a href="#" class="sn sn--fb">Мы на Фейсбуке</a>
+      </li>
+      <li class="ib__item  socials__item">        
+        <a href="#" class="sn sn--yt">Мы на Ютубе</a>
+      </li>
+    </ul>
+
+    <div class="footer__item">
+      Разработано <a href="//htmlacademy.ru">HTML Academy</a>
+    </div>
+  </footer>
+
+  <script src="js/main.min.js"></script>
 </body>
 </html>

@@ -1,18 +1,19 @@
 @charset "UTF-8";
 /*
 @import "partials/buttons.less";
-@import "partials/footer.less";
 @import "partials/forms.less";
 @import "partials/header.less";
 @import "partials/index.less";
-@import "partials/nav.less";
 */
 
 @import "partials/variables";
 
 @import "partials/fonts";
 @import "partials/grid";
+@import "partials/header";
 @import "partials/mixins";
-@import "partials/scaffolding";
+@import "partials/nav";
 @import "partials/normalize";
+@import "partials/scaffolding";
 @import "partials/utils";
+@import "partials/footer";

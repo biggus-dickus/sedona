@@ -15,8 +15,8 @@
 }
 
 /* Default smooth transition effect */
-@mixin transition() {
-  transition: all 0.2s linear;
+@mixin transition($property: all) {
+  transition: $property 0.2s linear;
 }
 
 /* Button Mixin */
@@ -88,44 +88,38 @@
   border-left-style: none;
 } */
 
-// Hamburger Settings
-// ------------------------------------------------------------------------
-/* .hamburger-settings(@width: 32px, @height: 3px, @gutter: 5px, @color: #000,
-                    @border-radius: 0, @duration: .3s,
-                    @timing-function: ease) {
-  // Set variables
-  @hamburger-width: @width;
-  @hamburger-height: @height;
-  @hamburger-gutter: @gutter;
-  @hamburger-color: @color;
-  @hamburger-border-radius: @border-radius;
-  @hamburger-duration: @duration;
-  @hamburger-timing-function: @timing-function;
-} */
-
-
 
 // Hamburger Generator
 // ------------------------------------------------------------------------
-/* .hamburger-generator() {
+@mixin hamburger-generator($width: 32px, $height: 3px, $gutter: 5px, $color: #000,
+                    $border-radius: 0, $duration: .3s,
+                    $timing-function: ease) {
+  
+  $hamburger-width: $width;
+  $hamburger-height: $height;
+  $hamburger-gutter: $gutter;
+  $hamburger-color: $color;
+  $hamburger-border-radius: $border-radius;
+  $hamburger-duration: $duration;
+  $hamburger-timing-function: $timing-function;
   position: relative;
-  margin-top: @hamburger-height + @hamburger-gutter;
-  margin-bottom: @hamburger-height + @hamburger-gutter;
+  margin-top: $hamburger-height + $hamburger-gutter;
+  margin-bottom: $hamburger-height + $hamburger-gutter;
 
   &,
   &:before,
   &:after {
     display: block;
-    width: @hamburger-width;
-    height: @hamburger-height;
-    transition: background-color @hamburger-duration @hamburger-timing-function,
-                transform @hamburger-duration @hamburger-timing-function;
+    width: $hamburger-width;
+    height: $hamburger-height;
+    transition: background-color $hamburger-duration $hamburger-timing-function,
+                transform $hamburger-duration $hamburger-timing-function;
 
-    & when not (@hamburger-border-radius = 0) {
-      border-radius: @hamburger-border-radius;
+    @if ($hamburger-border-radius != 0) {
+      border-radius: $hamburger-border-radius;
     }
 
-    background-color: @hamburger-color;
+    background-color: $hamburger-color;
   }
 
   &:before,
@@ -135,25 +129,25 @@
   }
 
   &:before {
-    top: -(@hamburger-height + @hamburger-gutter);
+    top: -($hamburger-height + $hamburger-gutter);
   }
 
   &:after {
-    top: @hamburger-height + @hamburger-gutter;
+    top: $hamburger-height + $hamburger-gutter;
   }
-} */
+}
 
 
 // Hamburger Animation
 // ------------------------------------------------------------------------
-/* .hamburger-animation() {
+@mixin hamburger-animation($hamburger-gutter: 5px, $hamburger-height: 3px) {
   background-color: transparent;
 
   &:before {
-    transform: translateY(@hamburger-gutter + @hamburger-height) rotate(45deg);
+    transform: translateY($hamburger-gutter + $hamburger-height) rotate(45deg);
   }
 
   &:after {
-    transform: translateY(-(@hamburger-gutter + @hamburger-height)) rotate(-45deg);
+    transform: translateY(-($hamburger-gutter + $hamburger-height)) rotate(-45deg);
   }
-} */
+}

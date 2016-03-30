@@ -2,6 +2,10 @@
 	display: none;
 }
 
+.invisible {
+	visibility: hidden;
+}
+
 .mob-hidden {
 	@media #{$mobile} {
 		display: none;
