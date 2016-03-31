@@ -6,12 +6,12 @@
 @import "partials/index.less";
 */
 
-@import "partials/variables";
+@import "partials/_variables";
+@import "partials/_mixins";
 
 @import "partials/fonts";
 @import "partials/grid";
 @import "partials/header";
-@import "partials/mixins";
 @import "partials/nav";
 @import "partials/normalize";
 @import "partials/scaffolding";
