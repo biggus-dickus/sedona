@@ -56,37 +56,41 @@
 } */
 
 /* CSS triangles Mixin */
-/* .triangle(@_; @size; @color) {
+@mixin triangle($size, $color) {
   width: 0;
   height: 0;
-  border-width: @size;
+  border-width: $size;
   border-style: solid;
-  border-color: @color;
-} */
+  border-color: $color;
+}
 
-/* .triangle(top; @size; @color) {
+@mixin triangle-top($size, $color) {
+  @include triangle($size, $color);
   border-left-color: transparent;
   border-right-color: transparent;
   border-top-style: none;
-} */
+}
 
-/* .triangle(right; @size; @color) {
+@mixin triangle-right($size, $color) {
+  @include triangle($size, $color);
   border-top-color: transparent;
   border-bottom-color: transparent;
   border-right-style: none;
-} */
+}
 
-/* .triangle(bottom; @size; @color) {
+@mixin triangle-bottom($size, $color) {
+  @include triangle($size, $color);
   border-left-color: transparent;
   border-right-color: transparent;
   border-bottom-style: none;
-} */
+}
 
-/* .triangle(left; @size; @color) {
+@mixin triangle-left($size, $color) {
+  @include triangle($size, $color);
   border-top-color: transparent;
   border-bottom-color: transparent;
   border-left-style: none;
-} */
+}
 
 
 // Hamburger Generator

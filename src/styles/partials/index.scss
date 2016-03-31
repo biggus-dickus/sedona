@@ -1,0 +1,27 @@
+.main-caption {
+  position: relative;
+  
+  
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+  }
+
+  &::before {
+    top: -50px;
+    left: 0;
+    width: 320px;
+    height: 27px;
+    background: url("../img/promo-decorate-top.png") no-repeat 0 0;
+    background-size: contain;
+  }
+
+  &::after {
+    bottom: -35px;
+    left: 0;
+    z-index: 1;
+    @include triangle-bottom(17px 160px, #fff);
+  }
+}

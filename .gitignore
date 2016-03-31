@@ -2,7 +2,8 @@ bower_components/
 node_modules/
 build/
 .idea/
-.*~
+*.*~
+*/**/*.*~
 *.log
 Thumbs.db
 .DS_Store
