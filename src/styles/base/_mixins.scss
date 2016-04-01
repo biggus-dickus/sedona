@@ -56,37 +56,43 @@
 } */
 
 /* CSS triangles Mixin */
-@mixin triangle($size, $color) {
+%triangle {
   width: 0;
   height: 0;
-  border-width: $size;
   border-style: solid;
-  border-color: $color;
 }
 
 @mixin triangle-top($size, $color) {
-  @include triangle($size, $color);
+  @extend %triangle;
+  border-width: $size;
+  border-color: $color;
   border-left-color: transparent;
   border-right-color: transparent;
   border-top-style: none;
 }
 
 @mixin triangle-right($size, $color) {
-  @include triangle($size, $color);
+  @extend %triangle;
+  border-width: $size;
+  border-color: $color;
   border-top-color: transparent;
   border-bottom-color: transparent;
   border-right-style: none;
 }
 
 @mixin triangle-bottom($size, $color) {
-  @include triangle($size, $color);
+  @extend %triangle;
+  border-width: $size;
+  border-color: $color;
   border-left-color: transparent;
   border-right-color: transparent;
   border-bottom-style: none;
 }
 
 @mixin triangle-left($size, $color) {
-  @include triangle($size, $color);
+  @extend %triangle;
+  border-width: $size;
+  border-color: $color;
   border-top-color: transparent;
   border-bottom-color: transparent;
   border-left-style: none;

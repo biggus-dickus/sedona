@@ -2,19 +2,21 @@
 /*
 @import "partials/buttons.less";
 @import "partials/forms.less";
-@import "partials/header.less";
-@import "partials/index.less";
 */
 
-@import "partials/_variables";
-@import "partials/_mixins";
+/* Base */
+@import "base/_variables";
+@import "base/_mixins";
 
+/* Vendor */
+@import "vendor/normalize";
+
+/* Modules */
 @import "partials/fonts";
 @import "partials/grid";
 @import "partials/header";
 @import "partials/index";
 @import "partials/nav";
-@import "partials/normalize";
 @import "partials/scaffolding";
 @import "partials/utils";
 @import "partials/footer";
