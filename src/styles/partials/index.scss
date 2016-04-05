@@ -25,3 +25,12 @@
     @include triangle-bottom(17px 160px, #fff);
   }
 }
+
+.reasons {
+  @extend clearfix();
+}
+
+.google-map {
+  min-height: 350px;
+  background-color: #f3f1ed;
+}

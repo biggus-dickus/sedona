@@ -16,3 +16,15 @@
     padding-right: 0;
   }
 }
+
+.row {
+  @extend .clearfix();
+  position: relative;
+}
+
+@for $i from 1 to 3 {
+  .col-#{$i} {
+    float: left;
+    width: 100% / 3 * $i;  
+  }
+}
