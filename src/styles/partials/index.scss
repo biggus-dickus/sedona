@@ -27,7 +27,12 @@
 }
 
 .reasons {
-  @extend clearfix();
+  @extend .clearfix;
+
+  &__item.reasons__item--featured {
+    color: $white;
+    background-color: $blue;
+  }
 }
 
 .google-map {

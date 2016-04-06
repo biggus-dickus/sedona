@@ -20,19 +20,19 @@
 }
 
 /* Button Mixin */
-/* .button-variant(@color; @background; @border) {
-  color: @color;
-  background-color: @background;
-  border-color: @border;
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
 
   &:hover,
   &:focus,
   &.focus,
   &:active,
   &.active {
-    color: @color;
-    background-color: darken(@background, 10%);
-    border-color: darken(@border, 12%);
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 12%);
   }
   &:active,
   &.active {
@@ -47,13 +47,13 @@
     &.focus,
     &:active,
     &.active {
-      background-color: lighten(@background, 85%);
+      background-color: lighten($background, 85%);
       color: #333;
-      border-color: @border;
+      border-color: $border;
       cursor: not-allowed;
     }
   }
-} */
+}
 
 /* CSS triangles Mixin */
 %triangle {

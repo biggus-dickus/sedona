@@ -1,0 +1,41 @@
+.button {
+  width: 100%;
+  max-width: 460px;
+  height: 60px;
+  font-size: $header;
+  font-weight: 700;
+  line-height: 60px;
+  text-transform: uppercase;
+  @include transition();
+
+  &.button--default {
+    background-color: $blue;
+    color: $white;
+    border-color: transparent;
+
+    &:hover {
+      background-color: $blue-hover;
+    }
+
+    &:focus {
+      background-color: $blue-focus;
+      color: rgba($white, 0.45);
+      outline: none;
+    }
+  }
+
+  &[disabled],
+  &.disabled {
+    background-color: $gray-lighter;
+
+    &:hover {
+      background-color: $gray-lighter;
+      cursor: not-allowed;
+    }
+
+    &:focus {
+      color: $white;
+      outline: none;
+    }
+  }
+}
