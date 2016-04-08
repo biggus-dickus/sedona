@@ -1,9 +1,10 @@
 /* Paths */
-$fonts-path: "../fonts/ptsans";
+$fonts-path: "../fonts/";
 
 /* Dimensions */
 $screen-xs: 320px;
-$screen-lg: 1300px;
+$screen-md: 768px;
+$screen-lg: 1280px;
 
 /* Colors */
 $black: #000000;
@@ -21,8 +22,10 @@ $header: 21px;
 $p: 14px;
 
 /* Viewports */
-$mobile: "screen and (max-width: $body-min-width)";
-$desktop: "screen and (min-width: 1200px)";
+$mobile: "screen and (max-width: $screen-xs)";
+$tablet: "screen and (min-width: 301px) and (max-width: 768px)";
+$desktop: "screen and (min-width: 769px)";
+
 $retina2x: "(min-resolution: 2dppx)";
 $retina3x: "(min-resolution: 3dppx)";
 

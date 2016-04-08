@@ -1,5 +1,19 @@
 .main-footer {
+  
+  &__designer {
+    font-size: 35px;
+    text-decoration: none;
+    color: $black;
+    @include transition(color);
 
+    &:hover {
+      color: $blue;
+    }
+
+    &:active {
+      color: #b2b2b2;
+    } 
+  }
 }
 
 .socials {
@@ -8,11 +22,24 @@
   &__item:not(:last-child) {
     margin-right: 5px;
   }
-}
 
-.sn {
-  display: block;
-  width: 50px;
-  height: 50px;
-  background-color: $blue;
+  &__icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: $blue;
+    font-size: 20px;
+    line-height: 50px;
+    color: $white;
+    text-decoration: none;
+    @include transition();
+
+      &:hover {
+        background-color: $blue-hover;
+      }
+
+      &:active {
+        color: #b2b2b2;
+    } 
+  }
 }
