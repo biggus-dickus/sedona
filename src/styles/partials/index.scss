@@ -10,7 +10,7 @@
   }
 
   &::before {
-    top: -45px;
+    top: -26px;
     left: 50%;
     transform: translateX(-50%);
     width: 320px;
@@ -20,11 +20,21 @@
   }
 
   &::after {
-    bottom: -35px;
+    bottom: -17px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
     @include triangle-bottom(17px 160px, #fff);
+  }
+
+  &__header {
+    margin-bottom: 40px;
+    font-size: round($header * 0.86);
+    line-height: 1.44em;
+  }
+
+  &__text {
+    line-height: 1.86em;
   }
 }
 
@@ -32,8 +42,24 @@
   @extend .clearfix;
 
   &__item.reasons__item--featured {
+    padding-top: 40px;
+    padding-bottom: 30px;
     color: $white;
     background-color: $blue;
+  }
+
+  &__number {
+
+    &::before,
+    &::after {
+      content: "\2014";
+    }
+    &::before {
+      padding-right: 5px;
+    }
+    &::after {
+      padding-left: 5px;
+    }
   }
 }
 

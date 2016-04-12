@@ -5,6 +5,11 @@
   padding-bottom: 80px;
   background: $blue url("../img/bg/photo-background@1x.jpg") 50% 15% no-repeat;
 
+  @media #{$retina2x} {
+    background: $blue url("../img/bg/photo-background@2x.jpg") 50% 15% no-repeat;
+    background-size: cover;
+  } 
+
   &__text {
     display: block;
     margin: 0 auto;

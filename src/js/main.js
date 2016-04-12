@@ -23,3 +23,16 @@
     menuToggler.classList.toggle('hidden');
   });
 })();
+
+
+/**
+ * Google Map 
+ */
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map-canvas'), {
+    center: {lat: 34.7150075, lng: -112.0245944},
+    disableDefaultUI: true,
+    zoom: 9,
+    scrollwheel: false
+  });
+}

@@ -23,8 +23,8 @@ $p: 14px;
 
 /* Viewports */
 $mobile: "screen and (max-width: #{$screen-xs})";
-$tablet: "screen and (min-width: 301px) and (max-width: 768px)";
-$desktop: "screen and (min-width: 769px)";
+$tablet: "screen and (min-width: #{$screen-xs + 1}) and (max-width: #{$screen-md})";
+$desktop: "screen and (min-width: #{$screen-md + 1})";
 
 $retina2x: "(min-resolution: 2dppx)";
 $retina3x: "(min-resolution: 3dppx)";

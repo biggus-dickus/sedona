@@ -46,12 +46,16 @@
 
 
     <section class="main-caption">
-      <h1>
-        Седона&nbsp;&mdash; небольшой городок в&nbsp;Аризоне, заслуживающий большего!
-      </h1>
-      <p>
-        Рассмотрим 5&nbsp;причин, по&nbsp;которым Седона круче, чем Гранд-Каньон!
-      </p>
+      <div class="container">
+        <div class="row">
+          <h1 class="main-caption__header">
+            Седона&nbsp;&mdash; небольшой городок в&nbsp;Аризоне, заслуживающий большего!
+          </h1>
+          <p class="main-caption__text">
+            Рассмотрим 5&nbsp;причин, по&nbsp;которым Седона круче, чем Гранд-Каньон!
+          </p>
+        </div>
+      </div>
     </section>
 
 
@@ -68,7 +72,9 @@
             <span class="reasons__number">№ 1</span>
             <p class="reasons__text">Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов. Здесь течет своя жизнь</p>
           </div>
-          <div class="col-2  reasons__pic  reasons__pic--city"></div>
+          <div class="col-2  reasons__pic  reasons__pic--city">
+            <img src="img/bg/photo-city@1x.jpg" alt="Sedona Town">
+          </div>
         </div>
         
         <!-- Row -->
@@ -89,7 +95,9 @@
         
         <!-- Row -->
         <div class="row">
-          <div class="col-2  reasons__pic  reasons__pic--city"></div>
+          <div class="col-2  reasons__pic  reasons__pic--city">
+            <img src="img/bg/photo-bridge@1x.jpg" alt="Devil's Bridge">
+          </div>
           <div class="col-1  reasons__item  reasons__item--featured">
             <h2 class="reasons__header  reasons__header--white">
               Там есть Мост Дьявола
@@ -109,7 +117,7 @@
           <div class="col-1">
             <h3 class="reasons__header">Красивая дорога</h3>
             <span class="reasons__number">№ 4</span>
-            <p class="reasons__text">Ехать в&nbsp;Седону из&nbsp;Лас-Вегаса совсем нескучно!</p>
+            <p class="reasons__text">Ехать в&nbsp;Седону из&nbsp;Лас-Вегаса совсем не&nbsp;скучно!</p>
           </div>
           <div class="col-1">
             <h3 class="reasons__header">Мало туристов</h3>
@@ -135,7 +143,7 @@
 
 
 
-    <section class="google-map" id ="mapCanvas">
+    <section class="google-map" id="map-canvas">
       
     </section>
 
@@ -175,5 +183,6 @@
 
 
   <script src="js/main.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMUU1r5bhDgI998LefG7_bcGa82WUKKrI&callback=initMap"></script>
 </body>
 </html>
