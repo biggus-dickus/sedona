@@ -6,14 +6,21 @@
   border-left: 1px solid red;
   border-right: 1px solid red;
 
-  @media #{$desktop} {
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
-  &&--fluid {
+  &--fluid {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  &--fluid-xs {
+    @media #{$mobile} {
+      padding-left: 0;
+      padding-right: 0;
+    } 
+  }
+
+  @media #{$desktop} {
+    margin: 0 auto;
+    max-width: 320px;
   }
 }
 

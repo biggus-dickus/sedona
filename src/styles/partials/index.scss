@@ -10,8 +10,9 @@
   }
 
   &::before {
-    top: -50px;
-    left: 0;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 320px;
     height: 27px;
     background: url("../img/promo-decorate-top.png") no-repeat 0 0;
@@ -20,7 +21,8 @@
 
   &::after {
     bottom: -35px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
     @include triangle-bottom(17px 160px, #fff);
   }

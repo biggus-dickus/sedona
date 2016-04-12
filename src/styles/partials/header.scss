@@ -1,5 +1,35 @@
 .main-header {
   position: relative;
   min-height: 385px;
-  background: $blue url("../img/bg/bg--mobile.jpg") 50% 50% no-repeat;
+  padding-top: 140px;
+  padding-bottom: 80px;
+  background: $blue url("../img/bg/photo-background@1x.jpg") 50% 15% no-repeat;
+
+  &__text {
+    display: block;
+    margin: 0 auto;
+
+    &--welcome {
+      width: 115px;
+      height: 30px;
+      margin-bottom: 5px;
+    }
+
+    &--tothegorgeous {
+      width: 160px;
+      height: 20px;
+      margin-bottom: 30px;
+    }
+
+    &--sedona {
+      width: 280px;
+      height: 55px;
+      margin-bottom: 30px;
+    }
+
+    &--becausecanyon {
+      width: 180px;
+      height: 50px;
+    }
+  }
 }

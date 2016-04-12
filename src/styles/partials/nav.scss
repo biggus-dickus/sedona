@@ -7,10 +7,6 @@
   height: 55px;
   background-color: rgba($white, 0.95);
 
-  @media #{$desktop} {
-    max-width: $screen-xs;
-  }
-
   &__logo {
     display: block;
     margin: 0 auto;

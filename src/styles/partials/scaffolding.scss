@@ -7,9 +7,7 @@ html {
 *:after {box-sizing: inherit;}
 
 body {
-  @media #{$desktop} {
-    max-width: $screen-xs;
-  }
+  min-width: $screen-xs; 
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: $p;
   color: $text-base;
