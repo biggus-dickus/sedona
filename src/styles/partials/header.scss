@@ -1,9 +1,15 @@
 .main-header {
   position: relative;
-  min-height: 385px;
+  min-height: 150px;
   padding-top: 140px;
   padding-bottom: 80px;
   background: $blue url("../img/bg/photo-background@1x.jpg") 50% 15% no-repeat;
+
+  &--single-caption {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    background-position: 50% 50%;
+  }
 
   @media #{$retina2x} {
     background: $blue url("../img/bg/photo-background@2x.jpg") 50% 15% no-repeat;

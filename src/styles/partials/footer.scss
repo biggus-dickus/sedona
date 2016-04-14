@@ -1,6 +1,24 @@
 .main-footer {
   
-  &__designer {
+  &__header {
+    @extend .book-now__header;
+    margin: 1.9em 0;
+  }
+
+  &__item-text,
+  &__item-logo {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__item-text {
+    margin-right: 5px;
+    font-size: $p;
+    line-height: 1.86em;
+    height: 1.86em;
+  }
+
+  &__item-logo {
     font-size: 35px;
     text-decoration: none;
     color: $black;
@@ -18,6 +36,7 @@
 
 .socials {
   text-align: center;
+  margin-bottom: 40px;
 
   &__item:not(:last-child) {
     margin-right: 5px;

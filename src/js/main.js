@@ -30,7 +30,7 @@
  */
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map-canvas'), {
-    center: {lat: 34.7150075, lng: -112.0245944},
+    center: {lat: 34.850, lng: -111.800},
     disableDefaultUI: true,
     zoom: 9,
     scrollwheel: false

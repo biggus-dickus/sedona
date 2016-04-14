@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  //= template/meta-css.html
+  <title>Оставьте свой отзыв</title>
+</head>
+<body>
+
+  <header class="main-header  main-header--single-caption">
+    //= template/navbar.html
+    <!-- SVG Captions -->
+    <div class="container">
+      <img width="460" height="80" class="main-header__text  main-header__text--sedona" src="img/main-caption/text-sedona.svg" alt="Sedona"></div>
+  </header>
+
+  <section class="feedback">
+    <div class="container  top-block">
+      <!-- Row -->
+      <div class="row">
+        <h1 class="top-block__header">Оставьте свой отзыв</h1>
+        <p class="top-block__text">
+          Помогите нашим отелям стать лучше! Оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных вами достопримечательностях.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+        <form method="post" name="feedback-form" action="https://echo.htmlacademy.ru/adaptive" class="feedback-form">
+
+          <fieldset class="feedback-form__fieldset">
+            <legend class="feedback-form__fieldset-legend">Представьтесь, пожалуйста:</legend>
+            <label for="first-name">Имя:</label>
+            <input type="text" name="first-name" id="first-name">
+            <label for="surname">Фамилия:</label>
+            <input type="text" name="surname" id="surname">
+            <label for="patronymic">Отчество:</label>
+            <input type="text" name="patronymic" id="patronymic">
+          </fieldset>
+
+          <fieldset class="feedback-form__fieldset">
+            <legend class="feedback-form__fieldset-legend">Контактная информация:</legend>
+            <label for="phone-number">Контактный телефон:</label>
+            <input type="tel" name="phone-number" id="phone-number" placeholder="Введите телефон">
+            <label for="email">Электронная почта:</label>
+            <input type="email" name="email" id="email" placeholder="Введите e-mail">
+          </fieldset>
+
+          <fieldset class="feedback-form__fieldset">
+            <legend class="feedback-form__fieldset-legend">Ваше общее впечатление:</legend>
+            <input type="radio" name="impression" id="rather-positive" checked>
+            <label for="rather-positive">Скорее положительное</label>
+            <input type="radio" name="impression" id="rather-negative">
+            <label for="rather-negative">Скорее отрицательное</label>
+            <input type="radio" name="impression" id="undecided">
+            <label for="undecided">Затрудняюсь ответить</label>
+          </fieldset>
+
+          <fieldset class="feedback-form__fieldset">
+            <legend class="feedback-form__fieldset-legend">Посещенные достопримечательности:</legend>
+            <input type="checkbox" name="sights-visited" id="devils-bridge" checked>
+            <label for="devils-bridge">Мост дьявола</label>
+            <input type="checkbox" name="sights-visited" id="slide-park" checked>
+            <label for="slide-park">Слайд-парк</label>
+            <input type="checkbox" name="sights-visited" id="bell-rock">
+            <label for="bell-rock">Гора-Колокол</label>
+            <input type="checkbox" name="sights-visited" id="red-rocks" checked>
+            <label for="red-rocks">Красные скалы</label>
+          </fieldset>
+
+          <fieldset class="feedback-form__fieldset">
+            <legend class="feedback-form__fieldset-legend">Опишите свои эмоции:</legend>
+            <textarea name="feedback" id="feedback-textarea" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+          </fieldset>
+
+          <input type="submit" class="button  button--default" value="Отправить отзыв">
+        </form>
+      </div>
+    </div>
+
+  </section>
+  //= template/footer.html
+</body>
+</html>

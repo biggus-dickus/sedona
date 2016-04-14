@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name=viewport content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/main.min.css">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  //= template/meta-css.html
+
   <title>Welcome to the gorgeous Sedona!</title>
 </head>
 <body>
@@ -12,27 +10,7 @@
 
 
   <header class="main-header">
-    <nav class="navbar">
-      <a id="navbar-logo" href="/" class="navbar__logo" title="На главную">На главную</a>
-      <div id="menu-toggler" class="navbar__hamburger-wrapper">
-        <span class="navbar__hamburger"></span>
-      </div>
-      <ul id="menu" class="navbar__menu  hidden">
-        <li class="navbar__menu-item">
-          <a class="navbar__menu-link" href="/">Главная</a>
-          <span id="menu-cross" class="navbar__cross">&times;</span>
-        </li>
-        <li class="navbar__menu-item">
-          <a class="navbar__menu-link" href="media.html">Фото и&nbsp;видео</a>
-        </li>
-        <li class="navbar__menu-item">
-          <a class="navbar__menu-link" href="feedback.html">Форма отзыва</a>
-        </li>
-        <li class="navbar__menu-item">
-          <a class="navbar__menu-link" href="http://htmlacademy.ru" target="_blank">HTML Academy</a>
-        </li>
-      </ul>
-    </nav>
+    //= template/navbar.html
 
     <!-- SVG Captions -->
     <div class="container">
@@ -45,151 +23,118 @@
 
 
 
-    <section class="main-caption">
-      <div class="container">
-        <div class="row">
-          <h1 class="main-caption__header">
-            Седона&nbsp;&mdash; небольшой городок в&nbsp;Аризоне, заслуживающий большего!
-          </h1>
-          <p class="main-caption__text">
-            Рассмотрим 5&nbsp;причин, по&nbsp;которым Седона круче, чем Гранд-Каньон!
-          </p>
-        </div>
-      </div>
-    </section>
-
-
-
-    <section class="reasons">
-      <div class="container  container--fluid  reasons--featured">
-        
-        <!-- Row -->
-        <div class="row">
-          <div class="col-1  reasons__item  reasons__item--featured">
-            <h2 class="reasons__header">
-              Настоящий городок
-            </h2>
-            <span class="reasons__number">№ 1</span>
-            <p class="reasons__text">Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов. Здесь течет своя жизнь</p>
-          </div>
-          <div class="col-2  reasons__pic  reasons__pic--city">
-            <img width="800" height="400" src="img/bg/photo-city@1x.jpg" srcset="img/bg/photo-city@2x.jpg 2x" alt="Sedona Town">
-          </div>
-        </div>
-      </div>
-      
-      <div class="container">
-        <!-- Row -->
-        <div class="row  reasons__icons">
-          <div class="col-1">
-            <i class="reasons__icons-pict  icon-icon-house"></i>
-            <h3 class="reasons__icons-header">Жилье</h3>
-            <p class="reasons__icons-text">Рекомендуем пожить в&nbsp;настоящем мотеле. Всё как в&nbsp;кино!</p>
-          </div>
-          <div class="col-1">
-            <i class="reasons__icons-pict  icon-icon-gift"></i>
-            <h3 class="reasons__icons-header">Сувениры</h3>
-            <p class="reasons__icons-text">Не&nbsp;только китайского, но&nbsp;и&nbsp;местного производства!</p>
-          </div>
-          <div class="col-1">
-            <i class="reasons__icons-pict  icon-icon-burger"></i>
-            <h3 class="reasons__icons-header">Еда</h3>
-            <p class="reasons__icons-text">Всегда заказывайте фирменный бургер. Вы&nbsp;не&nbsp;разочаруетесь!</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container  container--fluid  reasons--featured">
-        <!-- Row -->
-        <div class="row">
-          <div class="col-2  reasons__pic  reasons__pic--bridge">
-            <img width="800" height="400" src="img/bg/photo-bridge@1x.jpg" srcset="img/bg/photo-bridge@2x.jpg 2x" alt="Devil's Bridge">
-          </div>
-          <div class="col-1  reasons__item  reasons__item--featured">
-            <h2 class="reasons__header  reasons__header--compensated">
-              Там есть Мост Дьявола
-            </h2>
-            <span class="reasons__number">№ 2</span>
-            <p class="reasons__text">Да, по&nbsp;нему можно пройти. Если, конечно, вы&nbsp;осмелитесь!</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container  reasons  reasons--rest">
-        <!-- Row -->
-        <div class="row">
-          <div class="col-1">
-            <h3 class="reasons__header">Небольшая площадь</h3>
-            <span class="reasons__number">№ 3</span>
-            <p class="reasons__text">Все достопримечательности очень близко</p>
-          </div>
-          <div class="col-1">
-            <h3 class="reasons__header">Красивая дорога</h3>
-            <span class="reasons__number">№ 4</span>
-            <p class="reasons__text">Ехать в&nbsp;Седону из&nbsp;Лас-Вегаса совсем не&nbsp;скучно!</p>
-          </div>
-          <div class="col-1">
-            <h3 class="reasons__header">Мало туристов</h3>
-            <span class="reasons__number">№ 5</span>
-            <p class="reasons__text">Большинство едет в&nbsp;Гранд-Каньон и&nbsp;толпится там</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <section class="book-now">
-      <div class="container">
-        <!-- Row -->
-        <div class="row">
-          <h2 class="book-now__header">Заинтересовались?</h2>
-          <p class="book-now__text">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;Седоне</p>
-          <button class="button  button--default">Найти гостиницу</button>
-        </div>
-      </div>
-    </section>
-
-
-
-    <section class="google-map" id="map-canvas"></section>
-
-
-
-  <footer class="main-footer">
+  <section class="main-caption">
     <div class="container">
-      <h3>#VisitSedona</h3>
+      <div class="row">
+        <h1 class="main-caption__header">
+          Седона&nbsp;&mdash; небольшой городок в&nbsp;Аризоне, заслуживающий большего!
+        </h1>
+        <p class="main-caption__text">
+          Рассмотрим 5&nbsp;причин, по&nbsp;которым Седона круче, чем Гранд-Каньон!
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="reasons">
+    <div class="container  container--fluid  reasons--featured">
+      
+      <!-- Row -->
+      <div class="row">
+        <div class="col-1  reasons__item  reasons__item--featured">
+          <h2 class="reasons__header">
+            Настоящий городок
+          </h2>
+          <span class="reasons__number">№ 1</span>
+          <p class="reasons__text">Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов. Здесь течет своя жизнь</p>
+        </div>
+        <div class="col-2  reasons__pic  reasons__pic--city">
+          <img width="800" height="400" src="img/bg/photo-city@1x.jpg" srcset="img/bg/photo-city@2x.jpg 2x" alt="Sedona Town">
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <!-- Row -->
+      <div class="row  reasons__icons">
+        <div class="col-1">
+          <i class="reasons__icons-pict  icon-icon-house"></i>
+          <h3 class="reasons__icons-header">Жилье</h3>
+          <p class="reasons__icons-text">Рекомендуем пожить в&nbsp;настоящем мотеле. Всё как в&nbsp;кино!</p>
+        </div>
+        <div class="col-1">
+          <i class="reasons__icons-pict  icon-icon-gift"></i>
+          <h3 class="reasons__icons-header">Сувениры</h3>
+          <p class="reasons__icons-text">Не&nbsp;только китайского, но&nbsp;и&nbsp;местного производства!</p>
+        </div>
+        <div class="col-1">
+          <i class="reasons__icons-pict  icon-icon-burger"></i>
+          <h3 class="reasons__icons-header">Еда</h3>
+          <p class="reasons__icons-text">Всегда заказывайте фирменный бургер. Вы&nbsp;не&nbsp;разочаруетесь!</p>
+        </div>
+      </div>
     </div>
 
-    <ul class="ib socials">
-      <li class="ib__item  socials__item">
-        <a href="#" class="socials__icon">
-          <i class="icon-icon-twitter"></i>
-        </a>
-      </li>
-      <li class="ib__item  socials__item">
-        <a href="#" class="socials__icon">
-          <i class="icon-icon-facebook"></i>
-        </a>
-      </li>
-      <li class="ib__item  socials__item">        
-        <a href="#" class="socials__icon">
-          <i class="icon-icon-youtube"></i>
-        </a>
-      </li>
-    </ul>
-
-    <div class="main-footer__item">
-      Разработано 
-      <a class="main-footer__designer" href="http://htmlacademy.ru" target="_blank">
-        <i class="icon-logo-htmlacademy"></i>
-      </a>
+    <div class="container  container--fluid  reasons--featured">
+      <!-- Row -->
+      <div class="row">
+        <div class="col-2  reasons__pic  reasons__pic--bridge">
+          <img width="800" height="400" src="img/bg/photo-bridge@1x.jpg" srcset="img/bg/photo-bridge@2x.jpg 2x" alt="Devil's Bridge">
+        </div>
+        <div class="col-1  reasons__item  reasons__item--featured">
+          <h2 class="reasons__header  reasons__header--compensated">
+            Там есть Мост Дьявола
+          </h2>
+          <span class="reasons__number">№ 2</span>
+          <p class="reasons__text">Да, по&nbsp;нему можно пройти. Если, конечно, вы&nbsp;осмелитесь!</p>
+        </div>
+      </div>
     </div>
-  </footer>
+
+    <div class="container  reasons  reasons--rest">
+      <!-- Row -->
+      <div class="row">
+        <div class="col-1">
+          <h3 class="reasons__header">Небольшая площадь</h3>
+          <span class="reasons__number">№ 3</span>
+          <p class="reasons__text">Все достопримечательности очень близко</p>
+        </div>
+        <div class="col-1">
+          <h3 class="reasons__header">Красивая дорога</h3>
+          <span class="reasons__number">№ 4</span>
+          <p class="reasons__text">Ехать в&nbsp;Седону из&nbsp;Лас-Вегаса совсем не&nbsp;скучно!</p>
+        </div>
+        <div class="col-1">
+          <h3 class="reasons__header">Мало туристов</h3>
+          <span class="reasons__number">№ 5</span>
+          <p class="reasons__text">Большинство едет в&nbsp;Гранд-Каньон и&nbsp;толпится там</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
-  <script src="js/main.min.js"></script>
+  <section class="book-now">
+    <div class="container">
+      <!-- Row -->
+      <div class="row">
+        <h2 class="book-now__header">Заинтересовались?</h2>
+        <p class="book-now__text">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в&nbsp;Седоне</p>
+        <button class="button  button--default">Найти гостиницу</button>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="google-map" id="map-canvas"></section>
+
+
+  //= template/footer.html
+  
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMUU1r5bhDgI998LefG7_bcGa82WUKKrI&callback=initMap"></script>
 </body>
 </html>

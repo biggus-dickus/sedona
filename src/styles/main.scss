@@ -1,8 +1,4 @@
 @charset "UTF-8";
-/*
-@import "partials/buttons.less";
-@import "partials/forms.less";
-*/
 
 /* Base */
 @import "base/_variables";
@@ -13,6 +9,7 @@
 
 /* Modules */
 @import "partials/buttons";
+@import "partials/feedback";
 @import "partials/fonts";
 @import "partials/grid";
 @import "partials/header";
