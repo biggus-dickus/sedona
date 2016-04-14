@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name=viewport content="width=device-width, initial-scale=1">
@@ -61,52 +61,61 @@
 
 
     <section class="reasons">
-      <div class="container  container--fluid-xs">
+      <div class="container  container--fluid  reasons--featured">
         
         <!-- Row -->
         <div class="row">
           <div class="col-1  reasons__item  reasons__item--featured">
-            <h2 class="reasons__header  reasons__header--white">
+            <h2 class="reasons__header">
               Настоящий городок
             </h2>
             <span class="reasons__number">№ 1</span>
             <p class="reasons__text">Седона&nbsp;&mdash; не&nbsp;аттракцион для туристов. Здесь течет своя жизнь</p>
           </div>
           <div class="col-2  reasons__pic  reasons__pic--city">
-            <img src="img/bg/photo-city@1x.jpg" alt="Sedona Town">
+            <img width="800" height="400" src="img/bg/photo-city@1x.jpg" srcset="img/bg/photo-city@2x.jpg 2x" alt="Sedona Town">
           </div>
         </div>
-        
+      </div>
+      
+      <div class="container">
         <!-- Row -->
-        <div class="row">
-          <div class="col-1  reasons__icon  reasons__icon--home">
-            <h3 class="reasons__header">Жилье</h3>
-            <p class="reasons__text">Рекомендуем пожить в&nbsp;настоящем мотеле. Всё как в&nbsp;кино!</p>
+        <div class="row  reasons__icons">
+          <div class="col-1">
+            <i class="reasons__icons-pict  icon-icon-house"></i>
+            <h3 class="reasons__icons-header">Жилье</h3>
+            <p class="reasons__icons-text">Рекомендуем пожить в&nbsp;настоящем мотеле. Всё как в&nbsp;кино!</p>
           </div>
-          <div class="col-1  reasons__icon  reasons__icon--food">
-            <h3 class="reasons__header">Еда</h3>
-            <p class="reasons__text">Всегда заказывайте фирменный бургер. Вы&nbsp;не&nbsp;разочаруетесь!</p>
+          <div class="col-1">
+            <i class="reasons__icons-pict  icon-icon-gift"></i>
+            <h3 class="reasons__icons-header">Сувениры</h3>
+            <p class="reasons__icons-text">Не&nbsp;только китайского, но&nbsp;и&nbsp;местного производства!</p>
           </div>
-          <div class="col-1  reasons__icon  reasons__icon--souvenir">
-            <h3 class="reasons__header">Сувениры</h3>
-            <p class="reasons__text">Не&nbsp;только китайского, но&nbsp;и&nbsp;местного производства!</p>
+          <div class="col-1">
+            <i class="reasons__icons-pict  icon-icon-burger"></i>
+            <h3 class="reasons__icons-header">Еда</h3>
+            <p class="reasons__icons-text">Всегда заказывайте фирменный бургер. Вы&nbsp;не&nbsp;разочаруетесь!</p>
           </div>
         </div>
-        
+      </div>
+
+      <div class="container  container--fluid  reasons--featured">
         <!-- Row -->
         <div class="row">
-          <div class="col-2  reasons__pic  reasons__pic--city">
-            <img src="img/bg/photo-bridge@1x.jpg" alt="Devil's Bridge">
+          <div class="col-2  reasons__pic  reasons__pic--bridge">
+            <img width="800" height="400" src="img/bg/photo-bridge@1x.jpg" srcset="img/bg/photo-bridge@2x.jpg 2x" alt="Devil's Bridge">
           </div>
           <div class="col-1  reasons__item  reasons__item--featured">
-            <h2 class="reasons__header  reasons__header--white">
+            <h2 class="reasons__header  reasons__header--compensated">
               Там есть Мост Дьявола
             </h2>
             <span class="reasons__number">№ 2</span>
             <p class="reasons__text">Да, по&nbsp;нему можно пройти. Если, конечно, вы&nbsp;осмелитесь!</p>
           </div>
         </div>
+      </div>
 
+      <div class="container  reasons  reasons--rest">
         <!-- Row -->
         <div class="row">
           <div class="col-1">
@@ -143,9 +152,7 @@
 
 
 
-    <section class="google-map" id="map-canvas">
-      
-    </section>
+    <section class="google-map" id="map-canvas"></section>
 
 
 

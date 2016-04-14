@@ -28,9 +28,8 @@
   }
 
   &__header {
-    margin-bottom: 40px;
-    font-size: round($header * 0.86);
-    line-height: 1.44em;
+    margin-bottom: 35px;
+    @extend .reasons__header;
   }
 
   &__text {
@@ -41,11 +40,82 @@
 .reasons {
   @extend .clearfix;
 
-  &__item.reasons__item--featured {
-    padding-top: 40px;
-    padding-bottom: 30px;
-    color: $white;
+  &--featured {
     background-color: $blue;
+  }
+
+  &--rest {
+    padding-bottom: 15px;
+    background-color: #eee;
+
+    .col-1:not(:last-child) {
+      padding-bottom: 17px;
+      border-bottom: 1px solid $gray-darker;
+    }
+  }
+
+  &--rest &__header {
+    margin-top: 1.83em;
+    margin-bottom: 0.83em;
+  }
+
+  &--rest &__text {
+    padding: 0 15px;
+  }
+
+  &__item.reasons__item--featured {
+    padding: 40px 20px 30px;
+    color: $white;
+  }
+
+  &__pic {
+    margin-bottom: -6px;
+  }
+
+  &__header {
+    font-size: round($header * 0.86);
+    line-height: 1.44em;
+
+    &--compensated {
+      margin-top: 0;
+    }
+  }
+
+  &__text {
+    @extend p;
+  }
+
+  &__icons {
+    padding-top: 10px;
+    padding-bottom: 25px;
+    text-align: left;
+  }
+
+  &__icons-pict,
+  &__icons-header {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__icons-pict {
+    margin-right: 10px;
+  }
+
+  &__icons-header {
+    font-size: round(0.86 * $header);
+    line-height: 1.44em;
+    margin-bottom: 1.25em;
+  }
+
+  &__icons-text {
+    @extend p;
+    padding-left: 50px;
+    margin-top: 0;
+  }
+
+  &__icons i {
+    font-size: 40px;
+    color: $blue;
   }
 
   &__number {
@@ -60,6 +130,21 @@
     &::after {
       padding-left: 5px;
     }
+  }
+}
+
+.book-now {
+  padding-bottom: 50px;
+
+  &__header {
+    font-size: $header;
+    line-height: 1.24em;
+  }
+
+  &__text {
+    font-size: $p;
+    line-height: 1.71em;
+    margin-bottom: 1.79em;
   }
 }
 
