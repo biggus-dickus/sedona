@@ -27,10 +27,66 @@
   }
 }
 
+.form-group {
+  display: block;
+}
+
 .feedback-form {
+
+  &__fieldset {
+    position: relative;
+    padding: 0 0 30px;
+
+    border: none;
+    margin: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -20px;
+      width: $screen-xs;
+      height: 1px;
+      background-color: $gray-base;
+    }
+
+     &:last-of-type::after {
+      content: none;
+    } 
+  }
 
   &__fieldset-legend {
     @extend .reasons__header;
+    padding-top: 1.1em;
+    margin-bottom: 1.39em;
+    font-weight: 700;
+  }
+
+  &__form-group {
+    margin-bottom: 20px;
+    text-align: right;
+  }
+
+  &__text-label,
+  &__input-field {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+
+  &__text-label {
+    width: 25%;
+    margin-right: 20px;
+    text-align: left;
+  }
+
+  &__input-field {
+    width: 65%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    background-color: $gray-lighter;
+    font-size: round(1.29 * $p);
+    line-height: 1.44em;
     font-weight: 700;
   }
 }
