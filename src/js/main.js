@@ -35,4 +35,10 @@ function initMap() {
     zoom: 9,
     scrollwheel: false
   });
+
+  var myMarker = new google.maps.Marker({
+    position: {lat: 34.825, lng: -111.670},
+    map: map,
+    icon: '../img/icons/map-marker.png'
+  });
 }

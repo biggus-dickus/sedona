@@ -27,11 +27,35 @@
   }
 }
 
-.form-group {
-  display: block;
+.required-field::after {
+  content: "\2a";
+  padding-left: 3px;
+  font-size: floor(1.3 * $p);
+  color: red;
 }
 
 .feedback-form {
+  margin-bottom: 35px;
+
+  /* Smooth opacity transition for input placeholder on focus */
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+/* Smooth opacity transition for textarea placeholder on focus */
+textarea::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+textarea::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+textarea:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+textarea:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+textarea:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
 
   &__fieldset {
     position: relative;
@@ -52,7 +76,11 @@
 
      &:last-of-type::after {
       content: none;
-    } 
+    }
+
+    .feedback-form__form-group:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 
   &__fieldset-legend {
@@ -60,11 +88,6 @@
     padding-top: 1.1em;
     margin-bottom: 1.39em;
     font-weight: 700;
-  }
-
-  &__form-group {
-    margin-bottom: 20px;
-    text-align: right;
   }
 
   &__text-label,
@@ -79,14 +102,84 @@
     text-align: left;
   }
 
-  &__input-field {
-    width: 65%;
+  &__input-field,
+  &__textarea {
     padding: 20px;
     border: none;
     outline: none;
-    background-color: $gray-lighter;
     font-size: round(1.29 * $p);
     line-height: 1.44em;
     font-weight: 700;
+    background-color: $gray-lighter;
+    @include transition(background-color);
+  }
+
+  &__input-field:hover,
+  &__textarea:hover {
+    background-color: $gray-base;
+  }
+
+  &__input-field:focus,
+  &__textarea:focus {
+    background-color: transparent;
+    outline: 4px solid $gray-base;
+  }
+
+  &__input-field {
+    width: 65%;
+  }
+
+  &__textarea {
+    resize: none;
+    width: 100%;
+    height: 160px;
+  }
+
+  &__checkbox-input,
+  &__radio-input {
+    display: none;
+  }
+
+  &__checkbox-label,
+  &__radio-label {
+    @extend .reasons__header;
+    font-weight: 700;
+    text-transform: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__checkbox-input + &__checkbox-label::before,
+  &__radio-input + &__radio-label::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    background-color: $gray-lighter;
+    @include transition(background-color);
+  }
+
+  &__checkbox-input:hover + &__checkbox-label::before,
+  &__radio-input:hover + &__radio-label::before {
+    background-color: $gray-base;
+  }
+
+  &__checkbox-input + &__checkbox-label::before {
+    width: 55px;
+    height: 55px;
+    border-radius: 5px;
+  }
+
+  &__radio-input + &__radio-label::before {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 15px $gray-lighter;
+  }
+
+  &__radio-input:checked + &__radio-label::before {
+    background-color: $text-base;
   }
 }

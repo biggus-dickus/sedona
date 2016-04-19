@@ -1,17 +1,12 @@
 {
-  "name": "planet-express",
+  "name": "sedona",
   "description": "Layout for practice",
   "main": "index.html",
   "authors": [
     "Max Maslenko"
   ],
   "license": "ISC",
-  "keywords": [
-    "Bender",
-    "is",
-    "great!"
-  ],
-  "homepage": "http://biggus-dickus.github.io/futurama",
+  "homepage": "http://biggus-dickus.github.io/sedona",
   "moduleType": [],
   "private": true,
   "ignore": [
