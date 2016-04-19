@@ -83,6 +83,10 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
     }
   }
 
+  &__form-group {
+    position: relative;
+  }
+
   &__fieldset-legend {
     @extend .reasons__header;
     padding-top: 1.1em;
@@ -96,15 +100,26 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
     vertical-align: baseline;
   }
 
-  &__text-label {
-    width: 25%;
-    margin-right: 20px;
+  &__text-label,
+  &__contact-label {
     text-align: left;
   }
 
+  &__text-label {
+    width: 25%;
+    margin-right: 20px;
+  }
+
+  &__contact-label {
+    display: block;
+    padding-left: 20px;
+    margin-bottom: 15px;
+  }
+
   &__input-field,
+  &__contact-input-field,
   &__textarea {
-    padding: 20px;
+    padding: 15px 20px;
     border: none;
     outline: none;
     font-size: round(1.29 * $p);
@@ -115,11 +130,13 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
   }
 
   &__input-field:hover,
+  &__contact-input-field:hover,
   &__textarea:hover {
     background-color: $gray-base;
   }
 
   &__input-field:focus,
+  &__contact-input-field:focus,
   &__textarea:focus {
     background-color: transparent;
     outline: 4px solid $gray-base;
@@ -127,6 +144,43 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 
   &__input-field {
     width: 65%;
+  }
+
+  &__contact-input-field {
+    width: 100%;
+    padding-right: 55px;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 55px;
+    height: 55px;
+    background: $gray-base;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translate(50%, -50%);
+    }
+
+    &--phone::after {
+      width: 18px;
+      height: 18px;
+      background-image: url("../img/sprite/sprite.png");
+      background-position: -94px -77px;
+    }
+
+    &--email::after {
+      width: 16px;
+      height: 12px;
+      background-image: url("../img/sprite/sprite.png");
+      background-position: -90px -60px;
+    }
   }
 
   &__textarea {
@@ -185,5 +239,17 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
 
   &__checkbox-input:checked + &__checkbox-label::before {
     background: $gray-base url("../img/sprite/input/tick.png") 50% 50% no-repeat;
+  }
+
+
+
+
+  &__required-fields {
+    margin-top: 2.35em;
+    font-size: round(1.14 * $p);
+
+    span {
+      color: red;
+    }
   }
 }

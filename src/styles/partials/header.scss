@@ -12,8 +12,7 @@
   }
 
   @media #{$retina2x} {
-    background: $blue url("../img/bg/photo-background@2x.jpg") 50% 15% no-repeat;
-    background-size: cover;
+    background: $blue url("../img/bg/photo-background@2x.jpg") 50% 25% no-repeat;
   } 
 
   &__text {

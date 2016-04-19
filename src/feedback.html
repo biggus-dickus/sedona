@@ -47,13 +47,15 @@
 
           <fieldset class="feedback-form__fieldset">
             <legend class="feedback-form__fieldset-legend">Контактная информация:</legend>
-            <div class="feedback-form__form-group  text-right">
-              <label class="feedback-form__text-label required-field" for="phone-number">Контактный телефон:</label>
-              <input class="feedback-form__input-field" type="tel" name="phone-number" id="phone-number" placeholder="Введите телефон" required>
+            <div class="feedback-form__form-group">
+              <label class="feedback-form__contact-label required-field" for="phone-number">Контактный телефон:</label>
+              <input class="feedback-form__contact-input-field" type="tel" name="phone-number" id="phone-number" placeholder="Введите телефон" required>
+              <span class="feedback-form__icon feedback-form__icon--phone"></span>
             </div>
-            <div class="feedback-form__form-group  text-right">
-              <label class="feedback-form__text-label required-field" for="email">Электронная почта:</label>
-              <input class="feedback-form__input-field" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+            <div class="feedback-form__form-group">
+              <label class="feedback-form__contact-label required-field" for="email">Электронная почта:</label>
+              <input class="feedback-form__contact-input-field" type="email" name="email" id="email" placeholder="Введите e-mail" required>
+              <span class="feedback-form__icon feedback-form__icon--email"></span>
             </div>
           </fieldset>
 
@@ -99,6 +101,9 @@
           </fieldset>
 
           <input type="submit" class="button  button--default" value="Отправить отзыв">
+          <div class="feedback-form__required-fields">
+            <span>*</span>&nbsp;&mdash; обязательные поля
+          </div>
         </form>
       </div>
     </div>
