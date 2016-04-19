@@ -182,4 +182,8 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
   &__radio-input:checked + &__radio-label::before {
     background-color: $text-base;
   }
+
+  &__checkbox-input:checked + &__checkbox-label::before {
+    background: $gray-base url("../img/sprite/input/tick.png") 50% 50% no-repeat;
+  }
 }
