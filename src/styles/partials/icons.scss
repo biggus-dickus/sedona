@@ -13,36 +13,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-thumb-up:before {
+  content: "\e900";
+}
 .icon-icon-burger:before {
-    content: "\e900";
+  content: "\e901";
 }
 .icon-icon-calendar:before {
-    content: "\e901";
+  content: "\e902";
 }
 .icon-icon-facebook:before {
-    content: "\e902";
+  content: "\e903";
 }
 .icon-icon-gift:before {
-    content: "\e903";
+  content: "\e904";
 }
 .icon-icon-house:before {
-    content: "\e904";
+  content: "\e905";
 }
 .icon-icon-minus:before {
-    content: "\e905";
+  content: "\e906";
 }
 .icon-icon-plus:before {
-    content: "\e906";
+  content: "\e907";
 }
 .icon-icon-twitter:before {
-    content: "\e907";
+  content: "\e908";
 }
 .icon-icon-youtube:before {
-    content: "\e908";
+  content: "\e909";
 }
 .icon-logo-htmlacademy:before {
-    content: "\e909";
+  content: "\e90a";
 }
 .icon-checkmark:before {
-    content: "\e90a";
+  content: "\e90b";
 }

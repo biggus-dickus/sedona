@@ -78,13 +78,17 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
       content: none;
     }
 
-    .feedback-form__form-group:not(:last-child) {
+    .feedback-form__form-group:not(:last-child):not(.feedback-form__form-group--radio) {
       margin-bottom: 20px;
     }
   }
 
   &__form-group {
     position: relative;
+
+    &--radio {
+      margin-bottom: 15px;
+    }
   }
 
   &__fieldset-legend {
@@ -189,6 +193,8 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
     height: 160px;
   }
 
+  /* Checkbox and radio buttons + states */
+
   &__checkbox-input,
   &__radio-input {
     display: none;
@@ -210,31 +216,31 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
     content: "";
     display: inline-block;
     vertical-align: middle;
+    width: 55px;
+    height: 55px;
     margin-right: 20px;
     background-color: $gray-lighter;
     @include transition(background-color);
   }
 
-  &__checkbox-input:hover + &__checkbox-label::before,
-  &__radio-input:hover + &__radio-label::before {
-    background-color: $gray-base;
-  }
-
   &__checkbox-input + &__checkbox-label::before {
-    width: 55px;
-    height: 55px;
     border-radius: 5px;
   }
 
   &__radio-input + &__radio-label::before {
-    width: 22px;
-    height: 22px;
     border-radius: 50%;
-    box-shadow: 0 0 0 15px $gray-lighter;
+  }
+
+  &__checkbox-input:hover + &__checkbox-label::before {
+    background: $gray-darker url("../img/sprite/input/tick-dn.png") 50% 50% no-repeat;
+  }
+
+  &__radio-input:hover + &__radio-label::before {
+    background: $gray-darker url("../img/sprite/input/radio-dn.png") 50% 50% no-repeat;
   }
 
   &__radio-input:checked + &__radio-label::before {
-    background-color: $text-base;
+    background: $gray-base url("../img/sprite/input/radio.png") 50% 50% no-repeat;
   }
 
   &__checkbox-input:checked + &__checkbox-label::before {
