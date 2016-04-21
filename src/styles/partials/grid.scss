@@ -29,9 +29,9 @@
   position: relative;
 }
 
-@for $i from 1 to 3 {
+@for $i from 1 to 12 {
   .col-#{$i} {
     /*float: left;*/
-    /*width: 100% / 3 * $i;  */
+    /*width: 100% / 12 * $i;  */
   }
 }
