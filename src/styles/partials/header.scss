@@ -5,7 +5,7 @@
   padding-bottom: 80px;
   background: $blue url("../img/bg/photo-background@1x.jpg") 50% 15% no-repeat;
   
-  @include respond-from-to($mobile, false) {
+  @include respond-from-to($tablet, false) {
     min-height: 570px;
   }
 
