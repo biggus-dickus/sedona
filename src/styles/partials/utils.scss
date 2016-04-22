@@ -7,9 +7,9 @@
 }
 
 .mob-hidden {
-	@media #{$mobile} {
-		display: none;
-	}
+	@include respond-to(mobile) {
+    display: none;
+  }
 }
 
 .to-left {

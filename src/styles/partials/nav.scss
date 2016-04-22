@@ -1,6 +1,6 @@
 .navbar {
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
@@ -13,34 +13,44 @@
     width: 102px;
     height: 83px;
     text-indent: $over9000;
-    background: url("../img/logo/logo-mobile.png");
-    background-size: contain;
+    background: url("../img/logo/logo@1x.png") 0 0 no-repeat;
+
+    @media #{$retina2x} {
+      background: url("../img/logo/logo@2x.png") 0 0 no-repeat;
+      background-size: contain;
+    }
   }
 
   &__menu {
     padding: 0;
     margin: 0;
     list-style: none;
+
+    @include respond-to(mobile) {
+      display: none;
+    }
   }
 
   &__menu-item {
-    position: relative;
-    background-color: $blue;
-    box-shadow: 0 -1px inset #678fa8,
-                0 1px inset #9ac2db;
-    @include transition();
+    @include respond-to(mobile) {
+      position: relative;
+      background-color: $blue;
+      box-shadow: 0 -1px inset #678fa8,
+                  0 1px inset #9ac2db;
+      @include transition();
 
-    &:first-of-type {
-      box-shadow: 0 -1px inset #678fa8;
-    }
+      &:first-of-type {
+        box-shadow: 0 -1px inset #678fa8;
+      }
 
-    &:last-of-type {
-      box-shadow: 0 1px inset #9ac2db,
-                  0 -7px 7px -7px inset rgba(0,0,0,0.5);
-    }
+      &:last-of-type {
+        box-shadow: 0 1px inset #9ac2db,
+                    0 -7px 7px -7px inset rgba(0,0,0,0.5);
+      }
 
-    &:hover {
-      background-color: $blue-hover;
+      &:hover {
+        background-color: $blue-hover;
+      }
     }
   }
 
@@ -68,6 +78,10 @@
     &:hover {
       cursor: pointer;
     }
+
+    @include respond-from-to($tablet, false) {
+      display: none;
+    }
   }
  
   &__hamburger {
@@ -84,6 +98,10 @@
     text-indent: $over9000;
     background: url("../img/icons/icon-cross.svg") 0 0 no-repeat;
     background-size: contain;
+
+    @include respond-from-to($tablet, false) {
+      display: none;
+    }
 
     &:hover {
       cursor: pointer;

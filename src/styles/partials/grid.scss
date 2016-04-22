@@ -12,15 +12,24 @@
   }
 
   &--fluid-xs {
-    @media #{$mobile} {
+    @include respond-to(mobile) {
       padding-left: 0;
       padding-right: 0;
     } 
   }
 
-  @media #{$desktop} {
+  @include respond-to(mobile) {
+    max-width: $screen-xs;
+  }
+
+  @include respond-to(tablet) {
+    max-width: $screen-md;
     margin: 0 auto;
-    max-width: 320px;
+  }
+
+  @include respond-to(desktop) {
+    max-width: $screen-lg;
+    margin: 0 auto;
   }
 }
 
@@ -31,7 +40,57 @@
 
 @for $i from 1 to 12 {
   .col-#{$i} {
-    /*float: left;*/
-    /*width: 100% / 12 * $i;  */
+    float: left;
+    width: 100% / 12 * $i;
+
+    @include respond-to(mobile) {
+      float: none;
+      width: auto;
+    }
+  }
+}
+
+.top-block {
+  padding-top: 25px;
+  border-bottom: 1px solid $gray-base;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 27px;
+    background: url("../img/promo-decorate-top.png") no-repeat 0 0;
+    background-size: contain;
+  }
+
+  &__header {
+    @extend .reasons__header;
+    margin-bottom: 1.95em;
+  }
+
+  &__text {
+    margin-bottom: 1.43em;
+    font-size: $p;
+    line-height: 1.71em;
+  }
+
+  &--bottom-mask {
+    padding-bottom: 10px;
+    border-bottom: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      bottom: -17px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      @include triangle-bottom(17px 160px, #fff);
+    }
   }
 }

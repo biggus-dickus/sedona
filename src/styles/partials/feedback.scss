@@ -1,32 +1,3 @@
-.top-block {
-  padding-top: 30px;
-  border-bottom: 1px solid $gray-base;
-
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    top: -26px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 320px;
-    height: 27px;
-    background: url("../img/promo-decorate-top.png") no-repeat 0 0;
-    background-size: contain;
-  }
-
-  &__header {
-    @extend .reasons__header;
-    margin-bottom: 1.95em;
-  }
-
-  &__text {
-    margin-bottom: 1.43em;
-    font-size: $p;
-    line-height: 1.71em;
-  }
-}
-
 .required-field::after {
   content: "\2a";
   padding-left: 3px;
@@ -246,9 +217,6 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
   &__checkbox-input:checked + &__checkbox-label::before {
     background: $gray-base url("../img/sprite/input/tick.png") 50% 50% no-repeat;
   }
-
-
-
 
   &__required-fields {
     margin-top: 2.35em;

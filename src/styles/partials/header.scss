@@ -4,16 +4,24 @@
   padding-top: 140px;
   padding-bottom: 80px;
   background: $blue url("../img/bg/photo-background@1x.jpg") 50% 15% no-repeat;
+  
+  @include respond-from-to($mobile, false) {
+    min-height: 570px;
+  }
+
+  @include respond-from-to($desktop, false) {
+    background: $blue url("../img/bg/photo-background@2x.jpg") 50% 25% no-repeat;
+  }
+
+  @media #{$retina2x} {
+    background: $blue url("../img/bg/photo-background@2x.jpg") 50% 25% no-repeat;
+  }
 
   &--single-caption {
     padding-top: 120px;
     padding-bottom: 60px;
     background-position: 50% 50%;
   }
-
-  @media #{$retina2x} {
-    background: $blue url("../img/bg/photo-background@2x.jpg") 50% 25% no-repeat;
-  } 
 
   &__text {
     display: block;
