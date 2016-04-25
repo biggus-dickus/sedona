@@ -19,8 +19,11 @@
   @if $media == mobile {
     @media only screen and (max-width: $screen-xs) { @content; }
   }
+  @else if $media == mini-tablet {
+    @media only screen and (min-width: $screen-xs + 1) and (max-width: $screen-sm) { @content; }
+  }
   @else if $media == tablet {
-    @media only screen and (min-width: $screen-xs + 1) and (max-width: $screen-md) { @content; }
+    @media only screen and (min-width: $screen-sm + 1) and (max-width: $screen-md) { @content; }
   }
   @else {
     @media only screen and (min-width: $screen-md + 1) { @content; }

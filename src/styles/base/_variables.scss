@@ -3,17 +3,22 @@ $fonts-path: "../fonts/";
 
 /* Dimensions */
 $screen-xs: 320px;
+$screen-sm: 480px;
 $screen-md: 768px;
 $screen-lg: 1280px;
 
 /* Viewports */
 $mobile: $screen-xs;
-$tablet: $screen-xs + 1;
-$desktop: $screen-md + 1;
+$mini-tablet: $screen-sm + 1;
+$tablet: $screen-md + 1;
+$desktop: $screen-lg + 1;
 
 /* Retina */
 $retina2x: "(min-resolution: 2dppx)";
 $retina3x: "(min-resolution: 3dppx)";
+
+/* Sizes */
+$navbar-height: 55px;
 
 /* Colors */
 $black: #000000;
