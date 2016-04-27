@@ -24,17 +24,53 @@
     padding: 0 15px;
   }
 
-  &__item--featured {
-    padding: 40px 20px 30px;
-    color: $white;
+  &__item,
+  &__pic {
+    @include respond-from-to($screen-md, false) {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
 
-    @include respond-from-to($screen-md) {
-      padding: 0;
+  &__item {
+    @include respond-from-to($screen-md, false) {
+      width: 33%;
+      padding: 0 5%;
     }
   }
 
   &__pic {
-    margin-bottom: -6px;
+    @include respond-from-to(false, $screen-md) {
+      margin-bottom: -6px;
+    }
+
+    @include respond-from-to($screen-md, false) {
+      width: 66%;
+      margin-bottom: -11px;
+      font-size: 0;
+    }
+  }
+
+  &__pic--bridge {
+    @include respond-from-to($screen-md, false) {
+      text-align: left;
+      margin-left: -6px;
+    }
+  }
+
+  &__pic--city {
+    @include respond-from-to($screen-md, false) {
+      text-align: right;
+      margin-right: -6px;
+    }
+  }
+
+  &__item--featured {
+    color: $white;
+
+    @include respond-from-to(false, $screen-md) {
+      padding: 40px 20px 30px;
+    }
   }
 
   &__header {
@@ -58,22 +94,45 @@
   }
 
   &__icons {
-    padding-top: 15px;
-    padding-bottom: 25px;
-    text-align: left;
+    @include respond-from-to(false, $screen-md) {
+      padding-top: 15px;
+      padding-bottom: 25px;
+      text-align: left;
+    }
+  }
+
+  &__icons-block {
+    @include respond-from-to($screen-md, false) {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 0;
+      width: 32.9%;
+    }
   }
 
   &__icons-pict,
   &__icons-header {
-    display: inline-block;
-    vertical-align: middle;
+    @include respond-from-to(false, $screen-md) {
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 
   &__icons-pict {
-    width: 40px;
-    margin-right: 8px;
-    font-size: 40px;
     color: $blue;
+    
+    @include respond-from-to(false, $screen-md) {
+      width: 40px;
+      margin-right: 8px;
+      font-size: 40px;
+    }
+
+    @include respond-from-to($screen-md, false) {
+      display: block;
+      width: 60px;
+      margin: 0 auto;
+      font-size: 60px;
+    }
   }
 
   &__icons-header {
@@ -84,8 +143,11 @@
 
   &__icons-text {
     @extend p;
-    padding-left: 52px;
     margin-top: 0;
+
+    @include respond-from-to(false, $screen-md) {
+      padding-left: 52px;
+    }
   }
 
   &__number {

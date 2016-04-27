@@ -38,9 +38,19 @@
 
     @include respond-from-to($screen-md, false) {
       @include clearfix();
+      text-align: left;
+    }
+
+    @include respond-from-to($screen-md, $screen-lg) {
       padding-left: 25px;
       padding-right: 25px;
-      text-align: left;
+    }
+
+    @include respond-from-to($screen-lg, false) {
+      width: $screen-lg;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin: 0 auto;
     }
   }
 
