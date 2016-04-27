@@ -20,7 +20,7 @@
       background-size: contain;
     }
 
-    @include respond-from-to($tablet, false) {
+    @include respond-from-to($screen-md, false) {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
@@ -32,11 +32,11 @@
     margin: 0;
     list-style: none;
 
-    @include respond-from-to(false, $tablet) {
+    @include respond-from-to(false, $screen-md) {
       display: none;
     }
 
-    @include respond-from-to($tablet, false) {
+    @include respond-from-to($screen-md, false) {
       @include clearfix();
       padding-left: 25px;
       padding-right: 25px;
@@ -45,7 +45,7 @@
   }
 
   &__menu-item {
-    @include respond-to(mobile) {
+    @include respond-from-to(false, $screen-md) {
       position: relative;
       background-color: $blue;
       box-shadow: 0 -1px inset #678fa8,
@@ -66,32 +66,32 @@
       }
     }
     
-    @include respond-from-to($tablet, false) {
+    @include respond-from-to($screen-md, false) {
       font-size: $p;
       color: $text-base;
     }
   }
   
   /* Menu items behavior on breakpoints */
-  @include respond-from-to($tablet, false) {
+  @include respond-from-to($screen-md, false) {
     &__1st-item,
-    &__2nd-item,
-    &__3rd-item {
+    &__2nd-item {
       float: left;
     }
     
+    &__3rd-item,
     &__4th-item {
       float: right;
     }
   }
 
-  @include respond-from-to($tablet, $desktop) {
+  @include respond-from-to($screen-md, $screen-lg) {
     &__1st-item {
-      margin-right: 50px;
+      margin-right: 10.71%;
     }
 
     &__3rd-item {
-      margin-right: 35px;
+      margin-left: 7.14%;
     }
   }
 
@@ -103,7 +103,7 @@
     text-decoration: none;
     @include transition();
 
-    @include respond-to(mobile) {
+    @include respond-from-to(false, $screen-md) {
       text-align: center;
       color: $white;
       
@@ -113,7 +113,7 @@
       }
     }
 
-    @include respond-from-to($tablet, false) {
+    @include respond-from-to($screen-md, false) {
       color: $text-base;
 
       &:hover {
@@ -135,7 +135,7 @@
       cursor: pointer;
     }
 
-    @include respond-from-to($tablet, false) {
+    @include respond-from-to($screen-md, false) {
       display: none;
     }
   }
@@ -155,7 +155,7 @@
     background: url("../img/icons/icon-cross.svg") 0 0 no-repeat;
     background-size: contain;
 
-    @include respond-from-to($tablet, false) {
+    @include respond-from-to($screen-md, false) {
       display: none;
     }
 

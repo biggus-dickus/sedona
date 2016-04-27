@@ -24,9 +24,13 @@
     padding: 0 15px;
   }
 
-  &__item.reasons__item--featured {
+  &__item--featured {
     padding: 40px 20px 30px;
     color: $white;
+
+    @include respond-from-to($screen-md) {
+      padding: 0;
+    }
   }
 
   &__pic {
@@ -34,8 +38,15 @@
   }
 
   &__header {
-    font-size: round($header * 0.86);
-    line-height: 1.44em;
+    @include respond-from-to(false, $screen-md) {
+      font-size: round($header * 0.86);
+      line-height: 1.44em;
+    }
+
+    @include respond-from-to($screen-md, false) {
+      font-size: $header;
+      line-height: 1.24em;
+    }
 
     &--compensated {
       margin-top: 0;

@@ -15,24 +15,9 @@
 }
 
 /* Media queries mixins */
-@mixin respond-to($media) {
-  @if $media == mobile {
-    @media only screen and (max-width: $screen-xs) { @content; }
-  }
-  @else if $media == mini-tablet {
-    @media only screen and (min-width: $screen-xs + 1) and (max-width: $screen-sm) { @content; }
-  }
-  @else if $media == tablet {
-    @media only screen and (min-width: $screen-sm + 1) and (max-width: $screen-md) { @content; }
-  }
-  @else {
-    @media only screen and (min-width: $screen-md + 1) { @content; }
-  }
-}
-
 @mixin respond-from-to($from:false, $to:false) {
   @if $from and $to {
-    @media only screen and (min-width: $from + 1) and (max-width: $to - 1) { @content; }
+    @media only screen and (min-width: $from) and (max-width: $to - 1) { @content; }
   }
   @else if $from and $to == false {
     @media only screen and (min-width: $from) { @content; }
@@ -84,14 +69,16 @@
 }
 
 /* CSS triangles Mixin */
-%triangle {
+/* %triangle {
   width: 0;
   height: 0;
   border-style: solid;
-}
+} */
 
 @mixin triangle-top($size, $color) {
-  @extend %triangle;
+  width: 0;
+  height: 0;
+  border-style: solid;
   border-width: $size;
   border-color: $color;
   border-left-color: transparent;
@@ -100,7 +87,9 @@
 }
 
 @mixin triangle-right($size, $color) {
-  @extend %triangle;
+  width: 0;
+  height: 0;
+  border-style: solid;
   border-width: $size;
   border-color: $color;
   border-top-color: transparent;
@@ -109,7 +98,9 @@
 }
 
 @mixin triangle-bottom($size, $color) {
-  @extend %triangle;
+  width: 0;
+  height: 0;
+  border-style: solid;
   border-width: $size;
   border-color: $color;
   border-left-color: transparent;
@@ -118,7 +109,9 @@
 }
 
 @mixin triangle-left($size, $color) {
-  @extend %triangle;
+  width: 0;
+  height: 0;
+  border-style: solid;
   border-width: $size;
   border-color: $color;
   border-top-color: transparent;

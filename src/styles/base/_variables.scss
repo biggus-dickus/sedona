@@ -7,12 +7,6 @@ $screen-sm: 480px;
 $screen-md: 768px;
 $screen-lg: 1280px;
 
-/* Viewports */
-$mobile: $screen-xs;
-$mini-tablet: $screen-sm + 1;
-$tablet: $screen-md + 1;
-$desktop: $screen-lg + 1;
-
 /* Retina */
 $retina2x: "(min-resolution: 2dppx)";
 $retina3x: "(min-resolution: 3dppx)";

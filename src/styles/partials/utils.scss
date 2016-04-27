@@ -7,7 +7,7 @@
 }
 
 .mob-hidden {
-	@include respond-to(mobile) {
+	@include respond-from-to(false, $screen-xs) {
     display: none;
   }
 }
