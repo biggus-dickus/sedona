@@ -12,6 +12,7 @@ The original design encompassed three resolutions (mobile, tablet and desktop), 
 
 ## How to deploy
 To quickly build the project, follow these simple steps:
+
 1. Clone the project from Github.
 2. Install the necessary Node modules via NPM (run `npm install` in your console while in the project root directory). Note: you also need to have Node.js installed on your machine.
 3. Run `gulp` command in the console.
