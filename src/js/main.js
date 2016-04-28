@@ -8,19 +8,27 @@
   var menu = document.getElementById('menu');
   var menuToggler = document.getElementById('menu-toggler');
   var menuCross = document.getElementById('menu-cross');
+ 
+  /**
+   * Toggle 'hidden' class in a specified array of elements
+   * @param  {[Array]} elems [description]
+   */
+  function toggleHidden(elems) {
+    elems.forEach(function(item) {
+      item.classList.toggle('hidden');
+    });
+  }
 
-  menuToggler.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    this.classList.toggle('hidden');
-    navbarLogo.classList.toggle('hidden');
-    menu.classList.toggle('hidden');
+  // Shows menu on click, hides logo and hamburger
+  menuToggler.addEventListener('click', function() {
+    toggleHidden([menuToggler, navbarLogo]);
+    menu.style.display = 'block';
   });
-
-  menuCross.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    navbarLogo.classList.toggle('hidden');
-    menu.classList.toggle('hidden');
-    menuToggler.classList.toggle('hidden');
+  
+  // Hides menu on click, shows logo and hamburger
+  menuCross.addEventListener('click', function() {
+    toggleHidden([navbarLogo, menuToggler]);
+    menu.style.display = 'none';
   });
 })();
 
