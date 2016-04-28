@@ -2,6 +2,7 @@
   @extend .clearfix;
 
   &--featured {
+    @extend .fz-0;
     background-color: $blue;
   }
 
@@ -26,9 +27,14 @@
 
   &__item,
   &__pic {
+    @include respond-from-to(false, $screen-md) {
+      display: block;
+    }
+
     @include respond-from-to($screen-md, false) {
       display: inline-block;
       vertical-align: middle;
+      overflow: hidden;
     }
   }
 
@@ -38,30 +44,32 @@
       padding: 0 5%;
     }
   }
-
+  
   &__pic {
-    @include respond-from-to(false, $screen-md) {
-      margin-bottom: -6px;
-    }
-
+    height: 260px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    
     @include respond-from-to($screen-md, false) {
-      width: 66%;
-      margin-bottom: -11px;
-      font-size: 0;
-    }
-  }
-
-  &__pic--bridge {
-    @include respond-from-to($screen-md, false) {
-      text-align: left;
-      margin-left: -6px;
+      width: 67%;
+      height: 255px;      
     }
   }
 
-  &__pic--city {
-    @include respond-from-to($screen-md, false) {
-      text-align: right;
-      margin-right: -6px;
+  &__pic.reasons__pic--city {
+    background-image: url("../img/bg/photo-city@1x.jpg");
+
+    @media #{$retina2x} {
+      background-image: url("../img/bg/photo-city@2x.jpg");
+    }
+  }
+
+  &__pic.reasons__pic--bridge {
+    background-image: url("../img/bg/photo-bridge@1x.jpg");
+
+    @media #{$retina2x} {
+      background-image: url("../img/bg/photo-bridge@2x.jpg");
     }
   }
 
@@ -93,11 +101,23 @@
     @extend p;
   }
 
+  &__icons-wrapper {
+    @include respond-from-to($screen-md, $screen-lg) {
+      display: table-cell;
+      height: 330px;
+      vertical-align: middle;
+    }
+  }
+
   &__icons {
     @include respond-from-to(false, $screen-md) {
       padding-top: 15px;
       padding-bottom: 25px;
       text-align: left;
+    }
+
+    @include respond-from-to($screen-md, false) {
+      font-size: 0;
     }
   }
 
@@ -105,8 +125,8 @@
     @include respond-from-to($screen-md, false) {
       display: inline-block;
       vertical-align: top;
-      font-size: 0;
-      width: 32.9%;
+      width: 33.3%;
+      padding: 0 3.5%;
     }
   }
 
@@ -151,7 +171,8 @@
   }
 
   &__number {
-
+    @extend p;
+    
     &::before,
     &::after {
       content: "\2014";
