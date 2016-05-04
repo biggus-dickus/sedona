@@ -4,8 +4,14 @@
   top: 0;
   left: 0;
   width: 100%;
+  min-width: $screen-xs;
+  max-width: $screen-lg;
   height: $navbar-height;
   background-color: rgba($white, 0.95);
+
+  @include respond-from-to($screen-lg, false) {
+    @include abs-center(50%, false);
+  }
 
   &__logo {
     display: block;
@@ -13,17 +19,24 @@
     width: 102px;
     height: 83px;
     text-indent: $over9000;
-    background: url("../img/logo/logo@1x.png") 0 0 no-repeat;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-image: url("../img/logo/logo@1x.png");
 
     @media #{$retina2x} {
-      background: url("../img/logo/logo@2x.png") 0 0 no-repeat;
+      background-image: url("../img/logo/logo@2x.png");
       background-size: contain;
     }
 
     @include respond-from-to($screen-md, false) {
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      @include abs-center(50%, false);
+    }
+
+    @include respond-from-to($screen-lg, false) {
+      width: 138px;
+      height: 70px;
+      background-image: url("../img/logo/logo-desktop.png");
     }
   }
 
@@ -44,13 +57,6 @@
     @include respond-from-to($screen-md, $screen-lg) {
       padding-left: 25px;
       padding-right: 25px;
-    }
-
-    @include respond-from-to($screen-lg, false) {
-      width: $screen-lg;
-      padding-left: 30px;
-      padding-right: 30px;
-      margin: 0 auto;
     }
   }
 
@@ -102,6 +108,18 @@
 
     &__3rd-item {
       margin-left: 7.14%;
+    }
+  }
+
+  @include respond-from-to($screen-lg, false) {
+    &__1st-item {
+      margin-right: 160px;
+      margin-left: 90px;
+    }
+
+    &__3rd-item {
+      margin-right: 70px;
+      margin-left: 135px;
     }
   }
 

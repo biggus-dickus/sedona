@@ -14,8 +14,8 @@
    * @param  {[Array]} elems [description]
    */
   function toggleHidden(elems) {
-    elems.forEach(function(item) {
-      item.classList.toggle('hidden');
+    elems.forEach(function(elem) {
+      elem.classList.toggle('hidden');
     });
   }
 
