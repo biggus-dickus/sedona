@@ -102,7 +102,7 @@
   }
 
   &__icons-wrapper {
-    @include respond-from-to($screen-md, $screen-lg) {
+    @include respond-from-to($screen-md, false) {
       display: table-cell;
       height: 330px;
       vertical-align: middle;

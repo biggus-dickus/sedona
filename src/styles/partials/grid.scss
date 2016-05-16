@@ -1,3 +1,11 @@
+.box-wrapper {
+  @include respond-from-to($screen-lg, false) {
+    width: $screen-lg;
+    margin: 0 auto;
+    box-shadow: 0 -10px 30px $gray-darker;
+  }
+}
+
 .container {
   @extend .clearfix;
   position: relative;
@@ -13,11 +21,8 @@
   }
 
   @include respond-from-to($screen-lg, false) {
-    width: $screen-lg;
     padding-left: 65px;
     padding-right: 65px;
-    margin: 0 auto;
-    box-shadow: 0 0 30px $gray-darker;
   }
 
   &.container--fluid {
