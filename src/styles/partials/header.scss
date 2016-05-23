@@ -1,27 +1,33 @@
 .main-header {
+  @extend .container;
   position: relative;
   min-height: 150px;
   padding-top: 140px;
   padding-bottom: 80px;
   background-color: $blue;
-  background-position: 50% 15%;
+  background-position: 50% 100%,
+                      50% 15%;
   background-repeat: no-repeat;
-  background-image: url("../img/bg/photo-background@1x.jpg");
-  
+  background-image: url("../img/promo-decorate-top--big.png"),
+                    url("../img/bg/photo-background@1x.jpg");  
 
   @include respond-from-to($screen-md, false) {
-    background-size: cover;
+    background-size: contain, cover;
   }
   
   @include respond-from-to($screen-lg, false) {
-    background-image: url("../img/bg/photo-background@2x.jpg");
-    background-position: 50% 25%;
+    background-image: url("../img/promo-decorate-top--big.png"),
+                      url("../img/bg/photo-background@2x.jpg");
+    background-position: 50% 100%,
+                        50% 25%;
     padding-top: 115px;
   }
 
   @media #{$retina2x} {
-    background-image: url("../img/bg/photo-background@2x.jpg");
-    background-position: 50% 25%;
+    background-image: url("../img/promo-decorate-top--big.png"),
+                      url("../img/bg/photo-background@2x.jpg");
+    background-position: 50% 100%, 
+                        50% 25%;
   }
 
   &--single-caption {

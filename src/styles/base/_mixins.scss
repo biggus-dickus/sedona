@@ -15,7 +15,7 @@
 }
 
 /* Media queries mixins */
-@mixin respond-from-to($from:false, $to:false) {
+@mixin respond-from-to($from: false, $to: false) {
   @if $from and $to {
     @media only screen and (min-width: $from) and (max-width: $to - 1) { @content; }
   }
@@ -28,7 +28,7 @@
 }
 
 /* Always in center (for absolutely positioned elements) */
-@mixin abs-center($by-x-axis:50%, $by-y-axis:50%) {
+@mixin abs-center($by-x-axis: 50%, $by-y-axis: 50%) {
   @if $by-x-axis and $by-y-axis {
     left: $by-x-axis;
     top: $by-y-axis;
