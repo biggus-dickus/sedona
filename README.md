@@ -10,7 +10,7 @@ The original design encompassed three resolutions (mobile, tablet and desktop), 
 * at 768px,
 * and at 1280px.
 
-**Main technologies employed:** [SCSS](http://sass-lang.com/) as a CSS preprocessor and [Gulp](http://gulpjs.com/) as a project build tool. See `packaje.json` for the list of plugins/dependencies and `gulpfile.js` for details of my workflow.
+**Main technologies employed:** [SCSS](http://sass-lang.com/) as a CSS preprocessor and [Gulp](http://gulpjs.com/) as a project build tool. See `package.json` for the list of plugins/dependencies and `gulpfile.js` for details of my workflow.
 
 ## How to deploy
 To quickly build the project, follow these simple steps:
