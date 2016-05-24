@@ -10,7 +10,7 @@
   @extend .clearfix;
   position: relative;
 
-  @include respond-from-to(false, $screen-xs) {
+  @include respond-from-to(false, $screen-md) {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -48,7 +48,7 @@
     float: left;
     width: 100% / 12 * $i;
 
-    @include respond-from-to(false, $screen-sm) {
+    @include respond-from-to(false, $screen-md) {
       float: none;
       width: auto;
     }

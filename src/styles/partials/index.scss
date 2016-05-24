@@ -7,12 +7,16 @@
   }
 
   &--rest {
-    padding-bottom: 15px;
     background-color: #eee;
-
-    .col-4:not(:last-child) {
-      padding-bottom: 17px;
-      border-bottom: 1px solid $gray-darker;
+    @include respond-from-to(false, $screen-md) {
+      padding-bottom: 15px;
+    }
+    @include respond-from-to($screen-md, $screen-lg) {
+      padding-bottom: 30px;
+    }
+    @include respond-from-to($screen-lg, false) {
+      padding-top: 5px;
+      padding-bottom: 50px;
     }
   }
 
@@ -42,6 +46,13 @@
     @include respond-from-to($screen-md, false) {
       width: 33%;
       padding: 0 5%;
+    }
+  }
+
+  &__item-plain:not(:last-child) {
+    @include respond-from-to(false, $screen-md) {
+      padding-bottom: 17px;
+      border-bottom: 1px solid $gray-darker;
     }
   }
   
