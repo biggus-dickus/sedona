@@ -62,6 +62,7 @@
   .icon {
     margin-right: 5px;
     color: #b2b2b2;
+    
     @include transition(color);
 
     &:hover {

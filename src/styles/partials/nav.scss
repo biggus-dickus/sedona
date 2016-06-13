@@ -30,6 +30,7 @@
 
     @include respond-from-to($screen-md, false) {
       position: absolute;
+      
       @include abs-center(50%, false);
     }
 

@@ -31,7 +31,6 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
   &__fieldset {
     position: relative;
     padding: 0 0 30px;
-
     border: none;
     margin: 0;
 
@@ -57,7 +56,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
   &__form-group {
     position: relative;
 
-    &--radio:not(:last-child) {
+    &.feedback-form__form-group--radio:not(:last-child) {
       margin-bottom: 15px;
     }
   }
@@ -143,14 +142,14 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
       transform: translate(50%, -50%);
     }
 
-    &--phone::after {
+    &--phone.feedback-form__icon--phone::after {
       width: 18px;
       height: 18px;
       background-image: url("../img/sprite/sprite.png");
       background-position: -94px -77px;
     }
 
-    &--email::after {
+    &--email.feedback-form__icon--email::after {
       width: 16px;
       height: 12px;
       background-image: url("../img/sprite/sprite.png");

@@ -1,60 +1,60 @@
 .hidden {
-	display: none;
+  display: none;
 }
 
 .invisible {
-	visibility: hidden;
+  visibility: hidden;
 }
 
 .mob-hidden {
-	@include respond-from-to(false, $screen-xs) {
+  @include respond-from-to(false, $screen-xs) {
     display: none;
   }
 }
 
 .to-left {
-	float: left;
+  float: left;
 }
 
 .to-right {
-	float: right;
+  float: right;
 }
 
 .text-left {
-	text-align: left;
+  text-align: left;
 }
 
 .text-center {
-	text-align: center;
+  text-align: center;
 }
 
 .text-right {
-	text-align: right;
+  text-align: right;
 }
 
 .ib {
-	list-style: none;
-	padding-left: 0;
-	font-size: 0;
+  list-style: none;
+  padding-left: 0;
+  font-size: 0;
 
-	&__item {
-		display: inline-block;
-		vertical-align: middle;
-	}
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+  }
 
-	&.ib__item--vab {
-		vertical-align: bottom;
-	}
+  &.ib__item--vab {
+    vertical-align: bottom;
+  }
 
-	&.ib__item--vabl {
-		vertical-align: baseline;
-	}
+  &.ib__item--vabl {
+    vertical-align: baseline;
+  }
 
-	&.ib__item--vat {
-		vertical-align: top;
-	}
-}
+  &.ib__item--vat {
+    vertical-align: top;
+  }
+  }
 
-.fz-0 {
-	font-size: 0;
-}
+  .fz-0 {
+    font-size: 0;
+  }
