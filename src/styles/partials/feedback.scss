@@ -7,6 +7,9 @@
 
 .feedback-form {
   margin-bottom: 35px;
+  
+  /* Reason for disable: the only way to stylize placeholders */
+  /* stylelint-disable */
 
   /* Smooth opacity transition for input placeholder on focus */
 input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
@@ -27,6 +30,8 @@ textarea:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s 
 textarea:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
 textarea:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
 textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+  
+  /* stylelint-enable */
 
   &__fieldset {
     position: relative;
@@ -220,9 +225,12 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
   &__required-fields {
     margin-top: 2.35em;
     font-size: round(1.14 * $p);
-
+    
+    /* Reason for disable: trivial element */
+    /* stylelint-disable */
     span {
       color: red;
     }
+    /* stylelint-enable */
   }
 }

@@ -1,6 +1,8 @@
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
+  /* Reason for disable: use !important to prevent issues with browser extensions that change fonts */
+  /* stylelint-disable */
   font-family: 'icomoon' !important;
+  /* stylelint-enable */
   speak: none;
   font-style: normal;
   font-weight: normal;
