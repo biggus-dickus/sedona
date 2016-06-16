@@ -1,8 +1,35 @@
 .main-footer {
   
-  &__header {
+  @include respond-from-to($screen-md, false) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    font-size: 0;
+    text-align: left;
+  }
+
+  &__elem {
+    @include respond-from-to($screen-md, false) {
+      display: inline-block;
+      vertical-align: baseline;
+      margin-right: 16.6%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  
+  &__title {
     @extend .book-now__header;
-    margin: 1.9em 0;
+    margin-top: 1.9em;
+    margin-bottom: 1.9em;
+
+    @include respond-from-to($screen-md, false) {
+      position: relative;
+      top: 5px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 
   &__item-text,
@@ -37,6 +64,10 @@
 .socials {
   text-align: center;
   margin-bottom: 40px;
+
+  @include respond-from-to($screen-md, false) {
+    margin-bottom: 0;
+  }
 
   &__item:not(:last-child) {
     margin-right: 5px;

@@ -198,7 +198,15 @@
 }
 
 .book-now {
-  padding-top: 15px;
+  @include respond-from-to(false, $screen-md) {
+    padding-top: 15px;
+    padding-bottom: 50px;
+  }
+
+  @include respond-from-to($screen-md, false) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
 
   &__header {
     font-size: $header;
@@ -209,6 +217,12 @@
     font-size: $p;
     line-height: 1.71em;
     margin-bottom: 2.85em;
+
+    @include respond-from-to($screen-md, false) {
+      max-width: 460px;
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 }
 
