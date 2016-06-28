@@ -1,0 +1,162 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-cc-dn {
+  background-image: url(sprite.png);
+  background-position: -90px 0px;
+  width: 32px;
+  height: 20px;
+}
+.icon-cc-hvr {
+  background-image: url(sprite.png);
+  background-position: -90px -20px;
+  width: 32px;
+  height: 20px;
+}
+.icon-cc {
+  background-image: url(sprite.png);
+  background-position: -90px -40px;
+  width: 32px;
+  height: 20px;
+}
+.icon-ff-dn {
+  background-image: url(sprite.png);
+  background-position: 0px -33px;
+  width: 30px;
+  height: 22px;
+}
+.icon-ff-hvr {
+  background-image: url(sprite.png);
+  background-position: -30px -33px;
+  width: 30px;
+  height: 22px;
+}
+.icon-ff {
+  background-image: url(sprite.png);
+  background-position: -60px -33px;
+  width: 30px;
+  height: 22px;
+}
+.icon-fscr-dn {
+  background-image: url(sprite.png);
+  background-position: 0px -99px;
+  width: 20px;
+  height: 20px;
+}
+.icon-fscr-hvr {
+  background-image: url(sprite.png);
+  background-position: -20px -99px;
+  width: 20px;
+  height: 20px;
+}
+.icon-fscr {
+  background-image: url(sprite.png);
+  background-position: -40px -99px;
+  width: 20px;
+  height: 20px;
+}
+.icon-mail {
+  background-image: url(sprite.png);
+  background-position: -90px -60px;
+  width: 16px;
+  height: 12px;
+}
+.icon-phone {
+  background-image: url(sprite.png);
+  background-position: -94px -77px;
+  width: 18px;
+  height: 18px;
+}
+.icon-play-dn {
+  background-image: url(sprite.png);
+  background-position: -60px 0px;
+  width: 30px;
+  height: 33px;
+}
+.icon-play-hvr {
+  background-image: url(sprite.png);
+  background-position: 0px 0px;
+  width: 30px;
+  height: 33px;
+}
+.icon-play {
+  background-image: url(sprite.png);
+  background-position: -30px 0px;
+  width: 30px;
+  height: 33px;
+}
+.icon-radio-dn {
+  background-image: url(sprite.png);
+  background-position: 0px -77px;
+  width: 22px;
+  height: 22px;
+}
+.icon-radio {
+  background-image: url(sprite.png);
+  background-position: -22px -77px;
+  width: 22px;
+  height: 22px;
+}
+.icon-replay-dn {
+  background-image: url(sprite.png);
+  background-position: -76px -99px;
+  width: 16px;
+  height: 20px;
+}
+.icon-replay-hvr {
+  background-image: url(sprite.png);
+  background-position: -60px -99px;
+  width: 16px;
+  height: 20px;
+}
+.icon-replay {
+  background-image: url(sprite.png);
+  background-position: -92px -99px;
+  width: 16px;
+  height: 20px;
+}
+.icon-rew-dn {
+  background-image: url(sprite.png);
+  background-position: -60px -55px;
+  width: 30px;
+  height: 22px;
+}
+.icon-rew-hvr {
+  background-image: url(sprite.png);
+  background-position: -30px -55px;
+  width: 30px;
+  height: 22px;
+}
+.icon-rew {
+  background-image: url(sprite.png);
+  background-position: 0px -55px;
+  width: 30px;
+  height: 22px;
+}
+.icon-tick-dn {
+  background-image: url(sprite.png);
+  background-position: -69px -77px;
+  width: 25px;
+  height: 19px;
+}
+.icon-tick {
+  background-image: url(sprite.png);
+  background-position: -44px -77px;
+  width: 25px;
+  height: 19px;
+}
