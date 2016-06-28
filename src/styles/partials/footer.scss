@@ -1,34 +1,33 @@
 .main-footer {
   
-  @include respond-from-to($screen-md, false) {
-    padding-top: 35px;
-    padding-bottom: 35px;
-    font-size: 0;
-    text-align: left;
+  @include respond-from-to(false, $screen-md) {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
-  &__elem {
-    @include respond-from-to($screen-md, false) {
-      display: inline-block;
-      vertical-align: baseline;
-      margin-right: 16.6%;
+  @include respond-from-to($screen-md, $screen-lg) {
+    padding-left: 7.81%;
+    padding-right: 7.81%;
+  }
 
-      &:last-child {
-        margin-right: 0;
-      }
-    }
+  @include respond-from-to($screen-md, false) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 65px;
+  }
+
+
+  &__elem {
+    margin: 0;
   }
   
   &__title {
-    @extend .book-now__header;
-    margin-top: 1.9em;
-    margin-bottom: 1.9em;
+    @extend .reasons__header;
 
-    @include respond-from-to($screen-md, false) {
-      position: relative;
-      top: 5px;
-      margin-top: 0;
-      margin-bottom: 0;
+    @include respond-from-to(false, $screen-md) {
+      margin-top: 1.9em;
+      margin-bottom: 1.9em;
     }
   }
 

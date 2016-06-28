@@ -17,7 +17,7 @@
       background-color: $blue-hover;
     }
 
-    &:focus {
+    &:active {
       background-color: $blue-focus;
       color: rgba($white, 0.45);
       outline: none;

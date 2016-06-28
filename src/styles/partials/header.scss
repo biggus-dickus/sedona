@@ -21,6 +21,7 @@
     background-position: 50% 100%,
                         50% 25%;
     padding-top: 115px;
+    padding-bottom: 105px;
   }
 
   @media #{$retina2x} {
@@ -30,9 +31,9 @@
                         50% 25%;
   }
 
-  &--single-caption {
+  &.main-header--single-caption {
     padding-top: 120px;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
   }
 
   &__text {

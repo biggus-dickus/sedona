@@ -9,6 +9,8 @@
 .container {
   @extend .clearfix;
   position: relative;
+  // border-right: 1px solid red;
+  // border-left: 1px solid red;
 
   @include respond-from-to(false, $screen-md) {
     padding-left: 20px;

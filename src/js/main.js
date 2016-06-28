@@ -8,6 +8,8 @@
   var menu = document.getElementById('menu');
   var menuToggler = document.getElementById('menu-toggler');
   var menuCross = document.getElementById('menu-cross');
+  var findHotel = document.getElementById('find-hotel');
+  var hotelModal = document.getElementById('hotel-modal');
  
   /**
    * Toggle 'hidden' class in a specified array of elements
@@ -30,6 +32,14 @@
     toggleHidden([navbarLogo, menuToggler]);
     menu.style.display = 'none';
   });
+
+
+  //Toggle Find Hotels Modal Window 
+  if(findHotel) {
+    findHotel.addEventListener('click', function() {
+      hotelModal.classList.toggle('hidden');
+    });
+  }
 })();
 
 
