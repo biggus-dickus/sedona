@@ -1,3 +1,65 @@
+.top-block {
+  padding-top: 25px;
+
+  @include respond-from-to(false, $screen-md) {
+    border-bottom: 1px solid $gray-base;
+  }
+
+  &__header {
+    @extend .reasons__header;
+    margin-bottom: 40px;
+
+    @include respond-from-to($screen-sm, $screen-lg) {
+      padding: 0 17.5%;
+    }
+
+    @include respond-from-to($screen-lg, false) {
+      padding: 0 25%;
+    }
+  }
+
+  &__header.top-block__header--xl {
+    @include respond-from-to($screen-sm, false) {
+      font-size: $header-xl;
+    }
+  }
+
+  &__text {
+    margin-bottom: 1.43em;
+    font-size: $p;
+    line-height: 1.71em;
+
+    @include respond-from-to($screen-sm, false) {
+      margin-bottom: 3.93em;
+    }
+
+    @include respond-from-to($screen-md, $screen-lg) {
+      padding: 0 15%;
+    }
+
+    @include respond-from-to($screen-lg, false) {
+      padding: 0 25%;
+    }
+  }
+
+  &.top-block--mask-xs {
+    @include respond-from-to(false, $screen-xs) {
+      padding-bottom: 10px;
+      border-bottom: none;
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        bottom: -17px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include triangle-bottom(17px 160px, #fff);
+      }
+    }
+  }
+}
+
 .reasons {
   @extend .clearfix;
   font-size: 0;

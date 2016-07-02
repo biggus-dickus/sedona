@@ -7,6 +7,11 @@
 
 .feedback-form {
   margin-bottom: 35px;
+
+  @include respond-from-to($screen-md, false) {
+    display: flex;
+    flex-flow: row wrap;
+  }
   
   /* Reason for disable: the only way to stylize placeholders */
   /* stylelint-disable */
@@ -30,7 +35,6 @@ textarea:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s 
 textarea:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
 textarea:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
 textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
-  
   /* stylelint-enable */
 
   &__fieldset {
@@ -39,18 +43,38 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
     border: none;
     margin: 0;
 
+    @include respond-from-to($screen-md, false) {
+      flex-basis: 100%;
+    }
+
     &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: -20px;
-      width: $screen-xs;
-      height: 1px;
-      background-color: $gray-base;
+      @include respond-from-to(false, $screen-md) {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $gray-base;
+      }
     }
 
      &:last-of-type::after {
       content: none;
+    }
+
+    &.feedback-form__fieldset--1st,
+    &.feedback-form__fieldset--2nd {
+      @include respond-from-to($screen-md, false) {
+        flex-basis: 50%;
+      }
+    }
+
+    /* 1st item in flexbox layout */
+    &.feedback-form__fieldset--1st {
+      @include respond-from-to($screen-md, false) {
+        order: -1;
+      }
     }
 
     .feedback-form__form-group:not(:last-child):not(.feedback-form__form-group--radio) {
