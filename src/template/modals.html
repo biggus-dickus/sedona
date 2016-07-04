@@ -1,4 +1,28 @@
-<section class="modal-window hidden" id="hotel-modal">
-  <h1 class="modal-window__title">Хуяк-хуяк, это модальное окно!</h1>
-  <p>Контент здесь скоро будет.</p>
-</section>
+<article class="modal-window hidden" id="hotel-modal">
+  <h2 class="search-form__header">Поиск гостиницы в&nbsp;Седоне</h2>
+  <button class="btn" onclick="this.parentNode.classList.toggle('hidden')">&times;</button>
+  <form method="post" name="hotel-form" action="?" class="search-form">
+    <div class="form-group">
+      <label class="search-form__label" for="move-in-date">Дата заезда</label>
+      <input class="search-form__input" type="date" name="move-in-date" id="move-in-date">
+    </div>
+    <div class="form-group">
+      <label class="search-form__label" for="move-out-date">Дата выезда</label>
+      <input class="search-form__input" type="date" name="move-out-date" id="move-out-date">
+    </div>
+    <div class="form-group">
+      <label class="search-form__label" for="adults">Дети:</label>
+      <button class="search-form_counter">&minus;</button>
+      <input class="search-form__input" type="number" name="adults" id="adults">
+      <button class="search-form__counter">+</button>
+    </div>
+    <div class="form-group">
+      <label class="search-form__label" for="kids">Дети:</label>
+      <button class="search-form__counter">&minus;</button>
+      <input class="search-form__input" type="number" name="kids" id="kids">
+      <button class="search-form__counter">+</button>
+    </div>
+
+    <input type="submit" name="search-form-submit" value="Найти">
+  </form>
+</article>
