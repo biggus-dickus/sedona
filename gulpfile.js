@@ -18,6 +18,7 @@ var gulp = require('gulp'),
   imagemin = require('gulp-imagemin'),
   pngquant = require('imagemin-pngquant'),
   rimraf = require('rimraf'),
+  htmlmin = require('gulp-htmlmin'),
   
   // BrowserSync
   browserSync = require("browser-sync"),
@@ -79,6 +80,7 @@ gulp.task('clean', function (cb) {
 gulp.task('html:build', function () {
   gulp.src(path.src.html)
     .pipe(rigger())
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(path.build.html))
     .pipe(reload({stream: true}));
 });
