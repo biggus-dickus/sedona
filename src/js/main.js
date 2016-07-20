@@ -57,6 +57,6 @@ function initMap() {
   var myMarker = new google.maps.Marker({
     position: map.center,
     map: map,
-    icon: '../img/icons/map-marker.png'
+    icon: '/img/icons/map-marker.png'
   });
 }
