@@ -1,3 +1,13 @@
+.button,
+.btn {
+  display: inline-block;
+  border: none;
+  outline: none;
+  @include transition();
+  text-transform: uppercase;
+}
+
+
 .button {
   width: 100%;
   max-width: 460px;
@@ -5,8 +15,6 @@
   font-size: $header;
   font-weight: 700;
   line-height: 60px;
-  text-transform: uppercase;
-  @include transition();
 
   &.button--default {
     background-color: $blue;
@@ -20,7 +28,6 @@
     &:active {
       background-color: $blue-focus;
       color: rgba($white, 0.45);
-      outline: none;
     }
   }
 
@@ -35,7 +42,28 @@
 
     &:focus {
       color: $white;
-      outline: none;
+    }
+  }
+}
+
+.btn {
+    
+  &.btn--round-cross {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    background-color: #969696;
+    color: $brown;
+    opacity: 0.75;
+
+    &:hover {
+      opacity: 1;
     }
   }
 }

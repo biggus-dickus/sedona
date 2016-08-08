@@ -17,13 +17,13 @@
 /* Media queries mixins */
 @mixin respond-from-to($from: false, $to: false) {
   @if $from and $to {
-    @media only screen and (min-width: $from) and (max-width: $to - 1) { @content; }
+    @media only screen and (min-width: $from + 1) and (max-width: $to) { @content; }
   }
   @else if $from and $to == false {
     @media only screen and (min-width: $from) { @content; }
   }
   @else if $from == false and $to {
-    @media only screen and (max-width: $to - 1) { @content; }
+    @media only screen and (max-width: $to) { @content; }
   }
 }
 
@@ -41,6 +41,27 @@
   @else if $by-x-axis == false and $by-y-axis {
     top: $by-y-axis;
     transform: translateY(-$by-y-axis);
+  }
+}
+
+/* Always in center (for abs. positioned elements, using the margins trick) */
+@mixin abs-center-margins($horizontally: true, $vertically: true) {
+  @if $horizontally and $vertically {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  } 
+  @else if $horizontally and $vertically == false {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+  @else if $horizontally == false and $vertically {
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
   }
 }
 
@@ -80,7 +101,7 @@
       background-color: lighten($background, 85%);
       color: #333;
       border-color: $border;
-      cursor: not-allowed;
+      // cursor: not-allowed;
     }
   }
 }

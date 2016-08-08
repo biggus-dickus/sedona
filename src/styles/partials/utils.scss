@@ -2,14 +2,23 @@
   display: none;
 }
 
-.invisible {
-  visibility: hidden;
-}
-
 .mob-hidden {
   @include respond-from-to(false, $screen-xs) {
     display: none;
   }
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.relative {
+  position: relative;
+}
+
+.clearfix,
+.cf {
+  @include clearfix();
 }
 
 .to-left {
@@ -53,4 +62,8 @@
   &.ib__item--vat {
     vertical-align: top;
   }
+}
+
+.fz-0 {
+  font-size: 0;
 }

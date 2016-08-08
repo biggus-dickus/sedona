@@ -1,28 +1,43 @@
 <article class="modal-window hidden" id="hotel-modal">
-  <h2 class="search-form__header">Поиск гостиницы в&nbsp;Седоне</h2>
-  <button class="btn" onclick="this.parentNode.classList.toggle('hidden')">&times;</button>
-  <form method="post" name="hotel-form" action="?" class="search-form">
-    <div class="form-group">
-      <label class="search-form__label" for="move-in-date">Дата заезда</label>
-      <input class="search-form__input" type="date" name="move-in-date" id="move-in-date">
-    </div>
-    <div class="form-group">
-      <label class="search-form__label" for="move-out-date">Дата выезда</label>
-      <input class="search-form__input" type="date" name="move-out-date" id="move-out-date">
-    </div>
-    <div class="form-group">
-      <label class="search-form__label" for="adults">Дети:</label>
-      <button class="search-form_counter">&minus;</button>
-      <input class="search-form__input" type="number" name="adults" id="adults">
-      <button class="search-form__counter">+</button>
-    </div>
-    <div class="form-group">
-      <label class="search-form__label" for="kids">Дети:</label>
-      <button class="search-form__counter">&minus;</button>
-      <input class="search-form__input" type="number" name="kids" id="kids">
-      <button class="search-form__counter">+</button>
-    </div>
+  
+  <header class="modal-window__header-wrapper">
+    <h2 class="modal-window__header">Поиск гостиницы в&nbsp;Седоне</h2>
+    <button class="btn btn--round-cross" data-modal="close" title="Закрыть">&times;</button>
+  </header>
 
-    <input type="submit" name="search-form-submit" value="Найти">
+  
+  <form method="post" name="hotel-form" action="?" class="search-form">
+    <div class="search-form__form-group ib">
+      <label class="search-form__label ib__item" for="move-in-date">Дата заезда:</label>
+      <input class="search-form__input ib__item" type="text" name="move-in-date" id="move-in-date" required>
+      <i class="icon icon-icon-calendar search-form__icon" title="Выбрать дату"></i>
+    </div>
+    
+    <div class="search-form__form-group ib">
+      <label class="search-form__label ib__item" for="move-out-date">Дата выезда:</label>
+      <input class="search-form__input ib__item" type="text" name="move-out-date" id="move-out-date" required>
+      <i class="icon icon-icon-calendar search-form__icon" title="Выбрать дату"></i>
+    </div>
+    
+    <div class="search-form__form-group ib to-left">
+      <label class="search-form__label search-form__label--num ib__item" for="adults">Взрослые:</label>
+      <div class="ib__item relative">
+        <i class="icon icon-icon-minus search-form__control search-form__control--minus"></i>
+        <input class="search-form__input search-form__input--num" type="number" name="adults" id="adults" required>
+        <i class="icon icon-icon-plus search-form__control search-form__control--plus"></i>
+      </div>
+    </div>
+    
+    <div class="search-form__form-group ib to-right">
+      <label class="search-form__label search-form__label--num ib__item" for="kids">Дети:</label>
+      <div class="ib__item relative">
+        <i class="icon icon-icon-minus search-form__control search-form__control--minus"></i>
+        <input class="search-form__input search-form__input--num" type="number" name="kids" id="kids" required>
+        <i class="icon icon-icon-plus search-form__control search-form__control--plus"></i>
+      </div>
+    </div> 
+
+    <input class="button button--default search-form__btn" type="submit" name="search-form-submit" value="Найти">
+
   </form>
 </article>

@@ -9,6 +9,7 @@
   var menuToggler = document.getElementById('menu-toggler');
   var menuCross = document.getElementById('menu-cross');
   var findHotel = document.getElementById('find-hotel');
+  var modalWindow = document.querySelector('.modal-window');
   var hotelModal = document.getElementById('hotel-modal');
  
   /**
@@ -35,11 +36,23 @@
 
 
   //Toggle Find Hotels Modal Window 
-  if(findHotel) {
+  if (findHotel) {
     findHotel.addEventListener('click', function() {
       hotelModal.classList.toggle('hidden');
     });
   }
+
+  //Modal windows close button
+  var closeBtn = document.querySelectorAll('[data-modal="close"]');
+  
+  if (closeBtn) {
+    for (var i = 0; i < closeBtn.length; i++) {
+      closeBtn[i].addEventListener('click', function() {
+        modalWindow.classList.toggle('hidden');
+      });
+    }
+  } 
+
 })();
 
 

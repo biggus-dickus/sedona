@@ -1,12 +1,149 @@
+// Local vars
+$form-field-height: 40px;
+
+
 .modal-window {
   position: absolute;
-  z-index: 10;
+  @include abs-center-margins(true, false);
+  z-index: 5;
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  width: 500px;
-  height: 300px;
+  width: 85%;
+  max-width: 500px;
   background-color: $gray-darker;
+  box-shadow: 0 0 30px $black;
+
+  &__header-wrapper {
+    display: table;
+    width: 100%;
+  }
+
+  &__header {
+    display: table-cell;
+    vertical-align: middle;
+    height: 85px;
+    margin: 0;
+    font-size: $header;
+    color: $white;
+    letter-spacing: 1px;
+    background-color: $brown;
+
+    @include respond-from-to(false, $screen-sm) {
+      font-size: ceil($header * 0.75);
+      padding: 0 20%;
+      height: 60px;
+    }
+  }
+}
+
+
+.search-form {
+  padding: 10%;
+  background-color: $white;
+
+  &__form-group {
+    @extend .clearfix;
+    position: relative;
+    margin-bottom: 30px;
+    text-align: left;
+
+    &.to-left,
+    &.to-right {
+      @media screen and (max-width: 550px) {
+        float: none;
+      }
+    }
+    
+  }
+
+  &__label,
+  &__input {
+    font-size: $p;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  &__label {
+    width: 32%;
+    padding-right: 20px;
+
+    &.search-form__label--num {
+      @media screen and (min-width: 550px) {
+        width: auto;
+      }
+    }
+
+    &.search-form__label--num + .ib__item {
+      @media screen and (max-width: 550px) {
+        width: 68%;
+      }  
+    }
+  }
+
+  &__input,
+  &__icon {
+    line-height: $form-field-height;
+  }
+
+  &__input {
+    width: 68%;
+    height: $form-field-height;
+    padding: 0 40px 0 10px;
+    border: none;
+    background-color: $gray-lighter;
+    @include transition(background-color);
+
+    &:focus {
+      background-color: transparent;
+      outline: 1px solid $gray-darker;
+    }
+
+    &.search-form__input--num {
+      padding: 0 30px;
+      text-align: center;
+
+      @media screen and (min-width: 550px) {
+        width: 100px;
+      }
+
+      @media screen and (max-width: 550px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__icon,
+  &__control {
+    opacity: 0.5;
+    cursor: pointer;
+    @include transition(opacity);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 10px;
+    font-size: 24px;
+  }
+
+  &__control {
+    position: absolute;
+    @include abs-center(false, 50%);
+    font-size: $p;
+    line-height: $form-field-height;
+
+    &.search-form__control--minus {
+      left: 10px;
+    }
+
+    &.search-form__control--plus {
+      right: 10px;
+    }
+  }
+
+  &__btn {
+    margin-top: 15px;
+  }
 }
