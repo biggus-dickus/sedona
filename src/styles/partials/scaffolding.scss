@@ -26,6 +26,7 @@ p {
   line-height: 1.42em;
 }
 
+// Hiding spinners in num fields by default
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none;
@@ -33,5 +34,5 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 input[type='number'] {
-    -moz-appearance:textfield;
+  -moz-appearance: textfield;
 }
