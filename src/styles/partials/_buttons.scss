@@ -3,8 +3,8 @@
   display: inline-block;
   border: none;
   outline: none;
-  @include transition();
   text-transform: uppercase;
+  @include transition();
 }
 
 
@@ -47,7 +47,6 @@
 }
 
 .btn {
-    
   &.btn--round-cross {
     position: absolute;
     top: 10px;
@@ -55,15 +54,34 @@
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    font-size: 25px;
-    line-height: 25px;
-    text-align: center;
     background-color: #969696;
-    color: $brown;
-    opacity: 0.75;
+    text-indent: $over9000;
+    opacity: 0.8;
+    
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      // @include abs-center-margins; // renders like shit on -webkit :(
+      top: 5px;
+      left: 12px;
+      display: block;
+      width: 2px;
+      height: 16px;
+      background-color: $brown;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
 
     &:hover {
       opacity: 1;
+      transform: rotate(90deg);
     }
   }
 }

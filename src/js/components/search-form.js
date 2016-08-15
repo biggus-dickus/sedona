@@ -6,8 +6,8 @@
   
   if (searchForm) {
     for (var i = 0; i < numInput.length; i++) {
-      numInput[i].onclick = function() {
-        console.log('I\'m going through changes...');
+      numInput[i].onkeyup = function() {
+        constrainNumField(this);
       }
     }
 
@@ -52,7 +52,7 @@
         elem.value = 0;
       } else if (elem.value > NUM_FIELD_CONSTRAINT) {
         elem.value = NUM_FIELD_CONSTRAINT;
-      }
+      } 
     }
   }
 })();
