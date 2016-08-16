@@ -12,11 +12,10 @@
     }
 
     searchForm.addEventListener('click', function(evt) {
-      var clickedElement = evt.target;
-      var inputField = getInputField();
-      var number = parseInt(+inputField.value, 10);
+      var clickedElement = evt.target,
+          inputField = getInputField(),
+          number = parseNumField(inputField);
 
-      
       if (clickedElement.classList.contains('search-form__control--plus')) {
         inputField.value = ++number;
       } else if (clickedElement.classList.contains('search-form__control--minus')) {
@@ -42,15 +41,28 @@
       }
     });
 
+    
+    /**
+     * Get a numeric value from the input field
+     * @param  {Object} elem
+     */
+    function parseNumField(elem) {
+      if (elem) {
+        var number = parseInt(+elem.value, 10);
+      }
+
+      return number;
+    }
+
 
     /**
      * Make sure the input field value is not less than 0 and not greater than 10
      * @param {Object} elem
      */
     function constrainNumField(elem) {
-      if (elem.value < 0) {
+      if (elem && elem.value < 0) {
         elem.value = 0;
-      } else if (elem.value > NUM_FIELD_CONSTRAINT) {
+      } else if (elem && elem.value > NUM_FIELD_CONSTRAINT) {
         elem.value = NUM_FIELD_CONSTRAINT;
       } 
     }
