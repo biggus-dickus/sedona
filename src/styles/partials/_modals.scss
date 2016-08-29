@@ -3,14 +3,23 @@ $form-field-height: 40px;
 
 
 .modal-window {
-  position: absolute;
   @include abs-center-margins(true, false);
-  z-index: 5;
-  top: 0;
+  z-index: 1;
   width: 85%;
+  min-width: 275px;
   max-width: 500px;
   background-color: $gray-darker;
   box-shadow: 0 0 30px $black;
+
+  &__overlay {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+  }
 
   &__header-wrapper {
     display: table;
@@ -33,11 +42,25 @@ $form-field-height: 40px;
       height: 60px;
     }
   }
+
+  &__body {
+    padding: 10%;
+    background-color: $white;
+  }
+
+  &.modal-window--fixed {
+    position: fixed;
+    top: 33vh;
+  }
+
+  &.modal-window--contained {
+    position: absolute;
+    top: 0;
+  }
 }
 
 
 .search-form {
-  padding: 10%;
   background-color: $white;
 
   &__form-group {

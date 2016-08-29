@@ -3,31 +3,46 @@
     return;
   }
 
-  var form = document.getElementById('feedback-form');
+  var form = document.getElementById('feedback-form'); 
+  
+  if (form) {
+    var modal = document.getElementById('modal-window'),
+        data = new FormData(form),
+        xhr = new XMLHttpRequest(),
+        time = (new Date()).getTime();
 
-  if (form) {   
     form.addEventListener('submit', function(evt) {
       evt.preventDefault();
-      
-      var data = new FormData(form);
-      request(data, function(response) {
-        console.log(response);
+
+      xhr.open('post', 'https://echo.htmlacademy.ru/adaptive?' + time);
+      xhr.addEventListener('readystatechange', function() {
+        if (xhr.readyState == 4) {
+          console.log(xhr.responseText);
+          modal.classList.remove('hidden');
+        }
       });
+      
+      xhr.send(data);
     });
-  }
 
-  function request(data, fn) {
-    var xhr = new XMLHttpRequest();
-    var time = (new Date()).getTime();
+    
+    // Form autofill
+    form['first-name'].addEventListener('keyup', function() {
+      if (form['first-name'].value === 'test') {
+        form['first-name'].value = 'Антонина';
+        form['surname'].value = 'Мандавошина';
+        form['patronymic'].value = 'Львовна';
 
-    xhr.open("post", "https://echo.htmlacademy.ru/adaptive?" + time);
-    xhr.addEventListener("readystatechange", function() {
-      if (xhr.readyState == 4) {
-        fn(xhr.responseText);
+        form['phone-number'].value = '0991234567';
+        form['email'].value = 'test@test.com';
+
+        form['undecided'].setAttribute('checked', true);
+        form['slide-park'].setAttribute('checked', true);
+        form['red-rocks'].setAttribute('checked', true);
+
+        form['feedback-textarea'].value = 'Трясла мандой сначала под Харьковом! Потом на Волоколамском направлении! Потом в столице нашей Родины городе-герое Москве! Жевала говно лет двадцать, в комитете блядских, ссаных, сраных, хуесосовых советских матерей-дочерей! Трижды тридцать три раза распроебанных! Задрюченных до крови! Она показывала свою кислую, лохматую, червивую пизду! Медали, блядь! Ордена! Звания и заслуги! Почет, блядь! Уважение! Да я срал и ссал на твой горб! Я срал и ссал на твои сисяры потные! Я срал, ебал и ссал на мать твою, мокрожопую! Я срал и ссал на медали! Я срал и ссал на ордена! Я срал на вареных детей! Я срал! Я срал! Сра-а-ал! Сра-а-ал!!!';
       }
     });
-    
-    xhr.send(data);
   }
   
 })();

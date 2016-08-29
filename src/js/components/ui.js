@@ -47,6 +47,10 @@
     for (var i = 0; i < closeBtn.length; i++) {
       closeBtn[i].addEventListener('click', function() {
         modalWindow.classList.toggle('hidden');
+
+        if (modalWindow.parentNode.classList.contains('modal-window__overlay')) {
+          modalWindow.parentNode.classList.toggle('hidden');
+        }
       });
     }
   } 
