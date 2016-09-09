@@ -2,13 +2,14 @@
  * Hamburger menu toggler
  */
 (function() {
-  var navbarLogo = document.getElementById('navbar-logo');
-  var menu = document.getElementById('menu');
-  var menuToggler = document.getElementById('menu-toggler');
-  var menuCross = document.getElementById('menu-cross');
-  var findHotel = document.getElementById('find-hotel');
-  var modalWindow = document.querySelector('.modal-window');
-  var hotelModal = document.getElementById('hotel-modal');
+  var navbar = document.querySelector('.navbar'),
+      navbarLogo = document.getElementById('navbar-logo'),
+      menu = document.getElementById('menu'),
+      menuToggler = document.getElementById('menu-toggler'),
+      menuCross = document.getElementById('menu-cross'),
+      findHotel = document.getElementById('find-hotel'),
+      modalWindow = document.querySelector('.modal-window'),
+      hotelModal = document.getElementById('hotel-modal');
  
   /**
    * Toggle 'hidden' class in a specified array of elements
@@ -46,10 +47,10 @@
   if (closeBtn) {
     for (var i = 0; i < closeBtn.length; i++) {
       closeBtn[i].addEventListener('click', function() {
-        modalWindow.classList.toggle('hidden');
-
-        if (modalWindow.parentNode.classList.contains('modal-window__overlay')) {
-          modalWindow.parentNode.classList.toggle('hidden');
+        modalWindow.classList.add('hidden');
+        
+        if (navbar.classList.contains('index-one')) {
+          navbar.classList.remove('index-one');
         }
       });
     }
