@@ -230,13 +230,13 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
     border-radius: 50%;
   }
 
-  &__checkbox-input:hover + &__checkbox-label::before {
-    background: $gray-darker url("../img/sprite/input/tick-dn.png") 50% 50% no-repeat;
-  }
+  // &__checkbox-input:hover + &__checkbox-label::before {
+  //   background: $gray-darker url("../img/sprite/input/tick-dn.png") 50% 50% no-repeat;
+  // }
 
-  &__radio-input:hover + &__radio-label::before {
-    background: $gray-darker url("../img/sprite/input/radio-dn.png") 50% 50% no-repeat;
-  }
+  // &__radio-input:hover + &__radio-label::before {
+  //   background: $gray-darker url("../img/sprite/input/radio-dn.png") 50% 50% no-repeat;
+  // }
 
   &__radio-input:checked + &__radio-label::before {
     background: $gray-base url("../img/sprite/input/radio.png") 50% 50% no-repeat;

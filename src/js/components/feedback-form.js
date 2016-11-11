@@ -8,14 +8,15 @@
   if (form) {
     var modal = document.getElementById('modal-window'),
         navbar = document.querySelector('.navbar'),
-        data = new FormData(form),
+        formData = new FormData(form),
         xhr = new XMLHttpRequest(),
         time = (new Date()).getTime();
 
     form.addEventListener('submit', function(evt) {
       evt.preventDefault();
 
-      xhr.open('post', 'https://echo.htmlacademy.ru/adaptive?' + time);
+      // xhr.open('post', 'https://echo.htmlacademy.ru/adaptive?' + time);
+      xhr.open('post', 'http://httpbin.org/post');
       xhr.addEventListener('readystatechange', function() {
         if (xhr.readyState == 4) {
           console.log(xhr.responseText);
@@ -24,7 +25,7 @@
         }
       });
       
-      xhr.send(data);
+      xhr.send(formData);
     });
 
     
